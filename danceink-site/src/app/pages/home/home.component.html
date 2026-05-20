@@ -1,0 +1,36 @@
+<section>
+  <img src="assets/images/antagonistikotitaframeEL.jpg">
+</section><!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>{{ 'HOME.TITLE' | translate }}</h1>
+    <p>{{ 'HOME.SUBTITLE' | translate }}</p>
+    <button>{{ 'HOME.CTA' | translate }}</button>
+    <button (click)="switchLang('en')">EN</button>
+    <button (click)="switchLang('el')">GR</button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>{{ 'HOME.ABOUT_TITLE' | translate }}</h2>
+  <p>{{ 'HOME.ABOUT_TEXT' | translate }}</p>
+</section>
+
+<!-- DANCES -->
+<section class="dances">
+  <h2>{{ 'HOME.DANCES_TITLE' | translate }}</h2>
+
+  <div class="dance-grid">
+    <app-dance-card
+      *ngFor="let dance of dances"
+      [dance]="dance">
+    </app-dance-card>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>{{ 'HOME.CTA_TITLE' | translate }}</h2>
+  <button>{{ 'HOME.CTA_BUTTON' | translate }}</button>
+</section>

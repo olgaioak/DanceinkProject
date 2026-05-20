@@ -1,0 +1,17 @@
+{
+  "HOME": {
+    "TITLE": "Welcome to Our Dance School",
+    "SUBTITLE": "Feel the rhythm, live the passion",
+    "CTA": "Join Now",
+    "ABOUT_TITLE": "About Us",
+    "ABOUT_TEXT": "We teach all levels of dancers.",
+    "DANCES_TITLE": "Our Dance Styles",
+    "CTA_TITLE": "Start Dancing Today",
+    "CTA_BUTTON": "Register"
+  },
+    "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  }
+}

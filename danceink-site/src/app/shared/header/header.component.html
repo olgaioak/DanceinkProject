@@ -1,0 +1,31 @@
+<header class="header">
+
+  <div class="logo">
+    Dance Academy
+  </div>
+
+  <nav>
+    <a routerLink="/">
+      {{ 'NAV.HOME' | translate }}
+    </a>
+
+    <a href="#about">
+      {{ 'NAV.ABOUT' | translate }}
+    </a>
+
+    <a href="#contact">
+      {{ 'NAV.CONTACT' | translate }}
+    </a>
+  </nav>
+
+  <div class="lang-buttons">
+    <button (click)="switchLang('en')">
+      EN
+    </button>
+
+    <button (click)="switchLang('el')">
+      GR
+    </button>
+  </div>
+
+</header>
