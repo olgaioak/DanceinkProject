@@ -1,0 +1,59 @@
+<section class="events-header">
+  <div>
+    <app-section-eyebrow>{{ 'EVENTS_PAGE.EYEBROW' | translate }}</app-section-eyebrow>
+    <h1>{{ 'EVENTS_PAGE.HEADING' | translate }}</h1>
+  </div>
+
+  <app-filter-tabs
+    class="events-header__tabs"
+    [options]="[
+      { label: 'EVENTS_PAGE.ALL' | translate, value: '' },
+      { label: 'EVENTS_PAGE.SHOWS' | translate, value: 'show' },
+      { label: 'EVENTS_PAGE.WORKSHOPS' | translate, value: 'workshop' },
+      { label: 'EVENTS_PAGE.OPEN_DAYS' | translate, value: 'open-day' },
+      { label: '2026', value: '2026' }
+    ]"
+    [active]="selectedFilter"
+    (activeChange)="selectedFilter = $event">
+  </app-filter-tabs>
+</section>
+
+<section class="events-featured" *ngIf="featuredEvent as event">
+  <app-image-placeholder [label]="event.image.alt" [ratio]="event.image.aspectRatio" tone="neutral"></app-image-placeholder>
+  <div class="events-featured__content">
+    <p class="eyebrow-text">{{ 'EVENTS_PAGE.NEXT' | translate }} · {{ event.date | date: 'd MMMM y' }}</p>
+    <h2>{{ event.title }}<ng-container *ngIf="event.venue">, {{ event.venue }}</ng-container></h2>
+    <p>{{ event.description }}</p>
+    <a *ngIf="event.ctaLink" appButton="solid-dark" [href]="event.ctaLink">{{ event.ctaLabel }}</a>
+  </div>
+</section>
+
+<section class="events-grid">
+  <div class="events-grid__item" *ngFor="let event of filteredEvents">
+    <app-image-placeholder [label]="event.image.alt" [ratio]="event.image.aspectRatio" tone="neutral"></app-image-placeholder>
+    <p class="events-grid__tag" *ngIf="event.tag">{{ event.tag }} · {{ event.date | date: 'd MMMM' }}</p>
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.description }}</p>
+  </div>
+</section>
+
+<section class="events-archive">
+  <div class="events-archive__header">
+    <h2>{{ 'EVENTS_PAGE.ARCHIVE_HEADING' | translate }}</h2>
+    <span class="events-archive__years">2019 — 2026</span>
+  </div>
+  <div class="events-archive__grid">
+    <app-image-placeholder
+      *ngFor="let photo of archivePhotos$ | async"
+      [label]="photo.image.alt"
+      ratio="1:1"
+      tone="neutral">
+    </app-image-placeholder>
+    <div class="events-archive__more" *ngIf="archiveMoreCount$ | async as moreCount">+{{ moreCount }}</div>
+  </div>
+</section>
+
+<section class="events-parents">
+  <p>{{ 'EVENTS_PAGE.PARENTS_NOTE' | translate }}</p>
+  <a appButton="outline" href="#">{{ 'EVENTS_PAGE.ASK_FOR_LINK' | translate }}</a>
+</section>

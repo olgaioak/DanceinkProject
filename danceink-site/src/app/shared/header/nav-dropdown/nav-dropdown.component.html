@@ -1,0 +1,14 @@
+<div class="nav-dropdown__backdrop" (click)="closed.emit()"></div>
+<div class="nav-dropdown">
+  <a
+    *ngFor="let item of items"
+    class="nav-dropdown__item"
+    [routerLink]="['/dance', item.id]"
+    (click)="closed.emit()">
+    <span>{{ item.labelKey | translate }}</span>
+    <span class="nav-dropdown__age">{{ item.ageLabel }}</span>
+  </a>
+  <a class="nav-dropdown__all" routerLink="/dance" (click)="closed.emit()">
+    {{ 'NAV.ALL_DANCE_CLASSES' | translate }} →
+  </a>
+</div>

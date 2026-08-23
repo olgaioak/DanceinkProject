@@ -1,0 +1,66 @@
+<section class="pilates-hero">
+  <div class="pilates-hero__content">
+    <app-section-eyebrow>{{ 'PILATES_PAGE.EYEBROW' | translate }}</app-section-eyebrow>
+    <h1>{{ 'PILATES_PAGE.HEADING' | translate }}</h1>
+    <p class="pilates-hero__description">{{ 'PILATES_PAGE.DESCRIPTION' | translate }}</p>
+    <div class="pilates-hero__actions">
+      <a appButton="solid-dark" routerLink="/timetable">{{ 'PILATES_PAGE.SEE_THE_WEEK' | translate }}</a>
+      <a appButton="outline" href="#getting-started">{{ 'PILATES_PAGE.FIRST_TIMER' | translate }}</a>
+    </div>
+  </div>
+  <app-image-placeholder class="pilates-hero__image" label="Reformer, 4:5" ratio="4:5" tone="sage"></app-image-placeholder>
+</section>
+
+<section class="pilates-programs">
+  <div class="pilates-programs__card" *ngFor="let program of groupPrograms$ | async">
+    <app-image-placeholder
+      [label]="program.labelKey | translate"
+      ratio="3:2"
+      [tone]="program.id === 'mat' ? 'blush' : 'sage'">
+    </app-image-placeholder>
+    <h2>{{ program.labelKey | translate }}</h2>
+    <p>{{ program.description }}</p>
+    <dl class="pilates-programs__meta">
+      <div>
+        <dt>{{ 'PILATES_PAGE.CLASS_SIZE' | translate }}</dt>
+        <dd>{{ program.classSize }}</dd>
+      </div>
+      <div>
+        <dt>{{ 'PILATES_PAGE.LENGTH' | translate }}</dt>
+        <dd>{{ program.durationMinutes }}′</dd>
+      </div>
+      <div>
+        <dt>{{ 'PILATES_PAGE.LEVEL' | translate }}</dt>
+        <dd>{{ program.level }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section id="getting-started" class="pilates-steps">
+  <h2>{{ 'PILATES_PAGE.STEPS_HEADING' | translate }}</h2>
+  <div class="pilates-steps__grid">
+    <app-step-card stepNumber="01" [heading]="'PILATES_PAGE.STEP_1_HEADING' | translate" tone="sage">
+      {{ 'PILATES_PAGE.STEP_1_BODY' | translate }}
+    </app-step-card>
+    <app-step-card stepNumber="02" [heading]="'PILATES_PAGE.STEP_2_HEADING' | translate" tone="sage">
+      {{ 'PILATES_PAGE.STEP_2_BODY' | translate }}
+    </app-step-card>
+    <app-step-card stepNumber="03" [heading]="'PILATES_PAGE.STEP_3_HEADING' | translate" tone="sage">
+      {{ 'PILATES_PAGE.STEP_3_BODY' | translate }}
+    </app-step-card>
+  </div>
+</section>
+
+<section class="pilates-booking" *ngIf="studio$ | async as studio">
+  <app-section-eyebrow>{{ 'PILATES_PAGE.BOOKING_EYEBROW' | translate }}</app-section-eyebrow>
+  <h2>{{ 'PILATES_PAGE.BOOKING_HEADING' | translate }}</h2>
+  <div class="pilates-booking__actions">
+    <a appButton="solid-tint" tone="sage" [href]="whatsAppUrl(studio)" target="_blank" rel="noopener noreferrer">
+      {{ 'PILATES_PAGE.WHATSAPP' | translate }}
+    </a>
+    <a appButton="outline" [href]="instagramUrl(studio)" target="_blank" rel="noopener noreferrer">
+      {{ 'PILATES_PAGE.INSTAGRAM_DM' | translate }}
+    </a>
+  </div>
+</section>

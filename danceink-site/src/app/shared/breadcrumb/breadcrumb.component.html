@@ -1,0 +1,7 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ng-container *ngFor="let item of items; let last = last">
+    <a *ngIf="item.link && !last" [routerLink]="item.link">{{ item.label }}</a>
+    <span *ngIf="!item.link || last">{{ item.label }}</span>
+    <span *ngIf="!last" class="breadcrumb__separator">/</span>
+  </ng-container>
+</nav>

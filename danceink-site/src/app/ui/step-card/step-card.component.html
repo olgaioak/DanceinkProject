@@ -1,0 +1,5 @@
+<div class="step-card" [ngClass]="'step-card--' + tone">
+  <span class="step-card__number">{{ stepNumber }}</span>
+  <h3 class="step-card__heading">{{ heading }}</h3>
+  <p class="step-card__body"><ng-content></ng-content></p>
+</div>

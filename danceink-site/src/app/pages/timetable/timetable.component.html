@@ -1,0 +1,67 @@
+<section class="timetable-page">
+  <div class="timetable-page__header">
+    <div>
+      <app-section-eyebrow>{{ 'TIMETABLE_PAGE.EYEBROW' | translate }}</app-section-eyebrow>
+      <h1>{{ 'TIMETABLE_PAGE.HEADING' | translate }}</h1>
+    </div>
+
+    <app-filter-tabs
+      class="timetable-category-tabs"
+      [options]="[
+        { label: 'TIMETABLE_PAGE.ALL' | translate, value: '' },
+        { label: 'NAV.DANCE' | translate, value: 'dance' },
+        { label: 'NAV.PILATES' | translate, value: 'pilates' }
+      ]"
+      [active]="selectedCategory"
+      (activeChange)="selectedCategory = $event">
+    </app-filter-tabs>
+  </div>
+
+  <div class="timetable-legend">
+    <span class="timetable-legend__item">
+      <span class="timetable-legend__swatch timetable-legend__swatch--dance"></span>{{ 'NAV.DANCE' | translate }}
+    </span>
+    <span class="timetable-legend__item">
+      <span class="timetable-legend__swatch timetable-legend__swatch--pilates"></span>{{ 'NAV.PILATES' | translate }}
+    </span>
+    <span class="timetable-legend__item">
+      <span class="timetable-legend__swatch timetable-legend__swatch--private"></span>{{ 'TIMETABLE_PAGE.PRIVATE_BY_REQUEST' | translate }}
+    </span>
+  </div>
+
+  <app-filter-tabs
+    class="timetable-day-tabs"
+    [options]="[
+      { label: 'WEEKDAYS_SHORT.mon' | translate, value: 'mon' },
+      { label: 'WEEKDAYS_SHORT.tue' | translate, value: 'tue' },
+      { label: 'WEEKDAYS_SHORT.wed' | translate, value: 'wed' },
+      { label: 'WEEKDAYS_SHORT.thu' | translate, value: 'thu' },
+      { label: 'WEEKDAYS_SHORT.fri' | translate, value: 'fri' },
+      { label: 'WEEKDAYS_SHORT.sat' | translate, value: 'sat' }
+    ]"
+    [active]="selectedDay"
+    (activeChange)="onDayChange($event)">
+  </app-filter-tabs>
+
+  <div class="timetable-grid">
+    <div class="timetable-grid__day" *ngFor="let day of timetableByDay" [class.is-selected]="day.day === selectedDay">
+      <p class="eyebrow-text">{{ 'WEEKDAYS_SHORT.' + day.day | translate }}</p>
+
+      <div class="timetable-entry" [ngClass]="'timetable-entry--' + entry.category" *ngFor="let entry of day.entries">
+        <span class="timetable-entry__time">{{ entry.startTime }} — {{ entry.endTime }}</span>
+        <span class="timetable-entry__name">{{ entry.className }}</span>
+        <span class="timetable-entry__meta">{{ entry.meta }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timetable-note" *ngIf="studio$ | async as studio">
+    <p>{{ 'TIMETABLE_PAGE.BOOKING_NOTE' | translate }}</p>
+    <div class="timetable-note__actions">
+      <a appButton="solid-dark" [href]="whatsAppUrl(studio.phone)" target="_blank" rel="noopener noreferrer">
+        {{ 'TIMETABLE_PAGE.MESSAGE_US' | translate }}
+      </a>
+      <a appButton="outline" [href]="'tel:' + studio.phone">{{ studio.phone }}</a>
+    </div>
+  </div>
+</section>

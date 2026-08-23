@@ -1,21 +1,30 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
+import { NavDropdownComponent } from './nav-dropdown/nav-dropdown.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ 
+  imports: [
+    CommonModule,
     RouterModule,
-    TranslateModule],
+    TranslateModule,
+    LanguageSwitcherComponent,
+    NavDropdownComponent,
+    MobileMenuComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  isDanceDropdownOpen = false;
+  isMobileMenuOpen = false;
 
-  constructor(private translate: TranslateService) {}
-
-  switchLang(lang: string) {
-    this.translate.use(lang);
+  toggleDanceDropdown(): void {
+    this.isDanceDropdownOpen = !this.isDanceDropdownOpen;
   }
 }

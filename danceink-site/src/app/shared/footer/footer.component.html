@@ -1,9 +1,22 @@
 <footer class="footer">
+  <div class="footer__panel footer__panel--info">
+    <img
+      class="footer__logo"
+      src="assets/images/branding/DanceInk-Secondary-Logo-white.png"
+      alt="DANCE ink" />
 
-  <h3>Dance Academy</h3>
+    <app-contact-info class="footer__contact" [studio]="studio" tone="dark"></app-contact-info>
 
-  <p>
-    © 2026 All Rights Reserved
-  </p>
+    <div class="footer__links">
+      <ng-container *ngFor="let link of studio.socialLinks">
+        <a *ngIf="isInternalLink(link.url)" [routerLink]="link.url">{{ link.label }}</a>
+        <a *ngIf="!isInternalLink(link.url)" [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      </ng-container>
+    </div>
+  </div>
 
+  <div class="footer__panel footer__panel--map">
+    <app-image-placeholder label="Google Maps embed" tone="dark" [fill]="true"></app-image-placeholder>
+    <app-floating-directions-button [href]="studio.directionsUrl ?? '#'"></app-floating-directions-button>
+  </div>
 </footer>

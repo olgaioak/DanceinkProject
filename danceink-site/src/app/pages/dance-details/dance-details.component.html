@@ -1,9 +1,57 @@
-<div *ngIf="dance">
-  <h1>{{ dance.name }}</h1>
+<ng-container *ngIf="dance$ | async as dance; else notFound">
+  <div class="detail-breadcrumb-bar">
+    <app-breadcrumb
+      [items]="[
+        { label: 'NAV.DANCE' | translate, link: '/dance' },
+        { label: dance.labelKey | translate }
+      ]">
+    </app-breadcrumb>
+  </div>
 
-  <img [src]="dance.image">
+  <section class="detail-hero">
+    <div class="detail-hero__content">
+      <h1>{{ dance.labelKey | translate }}</h1>
+      <p class="detail-hero__description">{{ dance.shortDescription }}</p>
+      <div class="detail-hero__badges">
+        <app-badge>{{ 'DANCE_DETAIL.AGES' | translate }} {{ dance.ageRange | ageRange }}</app-badge>
+        <app-badge>{{ dance.durationMinutes }}′</app-badge>
+        <app-badge>{{ 'DANCE_DETAIL.STUDIO' | translate }} {{ dance.studio }}</app-badge>
+        <app-badge>{{ 'DANCE_DETAIL.MAX' | translate }} {{ dance.maxCapacity }}</app-badge>
+      </div>
+    </div>
+    <app-image-placeholder class="detail-hero__image" [label]="dance.image.alt" ratio="1:1" tone="blush">
+    </app-image-placeholder>
+  </section>
 
-  <p>{{ dance.description }}</p>
+  <section class="detail-body">
+    <div class="detail-body__main">
+      <h2>{{ 'DANCE_DETAIL.WHAT_CLASS_LOOKS_LIKE' | translate }}</h2>
+      <p>{{ dance.aboutClass }}</p>
 
-  <a routerLink="/">← Back to Home</a>
-</div>
+      <h2>{{ 'DANCE_DETAIL.WHAT_TO_BRING' | translate }}</h2>
+      <p>{{ dance.whatToBring }}</p>
+    </div>
+
+    <aside class="detail-body__sidebar">
+      <app-section-eyebrow>{{ 'DANCE_DETAIL.WHEN' | translate }}</app-section-eyebrow>
+      <ul class="schedule-list">
+        <li *ngFor="let session of dance.schedule">
+          <span>{{ 'WEEKDAYS.' + session.day | translate }}</span>
+          <span>{{ session.startTime }} · {{ session.ageNote || (dance.ageRange | ageRange) }}</span>
+        </li>
+      </ul>
+
+      <app-section-eyebrow>{{ 'DANCE_DETAIL.TEACHER' | translate }}</app-section-eyebrow>
+      <p class="detail-body__teacher">{{ dance.teacher }}</p>
+
+      <button type="button" appButton="solid-dark" class="detail-body__cta">
+        {{ 'DANCE_DETAIL.MESSAGE_TO_HOLD_PLACE' | translate }}
+      </button>
+      <p class="detail-body__trial-note">{{ 'DANCE_DETAIL.FREE_TRIAL' | translate }}</p>
+    </aside>
+  </section>
+</ng-container>
+
+<ng-template #notFound>
+  <p class="detail-not-found">{{ 'DANCE_DETAIL.NOT_FOUND' | translate }}</p>
+</ng-template>

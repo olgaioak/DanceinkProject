@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+:host.image-placeholder-host--fill {
+  position: absolute;
+  inset: 0;
+}
+
+.placeholder {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-background);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(49, 54, 56, 0.08),
+    rgba(49, 54, 56, 0.08) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+.placeholder--fill {
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder--blush {
+  background-color: var(--color-blush-soft);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(222, 179, 173, 0.6),
+    rgba(222, 179, 173, 0.6) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+.placeholder--sage {
+  background-color: var(--color-sage-soft);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(188, 196, 173, 0.6),
+    rgba(188, 196, 173, 0.6) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+.placeholder--dark {
+  background-color: var(--color-ink);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 249, 245, 0.08),
+    rgba(255, 249, 245, 0.08) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+.placeholder__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-ink-muted);
+  background: var(--color-background);
+  padding: 0.25rem 0.6rem;
+}
+
+.placeholder--dark .placeholder__label {
+  color: rgba(255, 249, 245, 0.6);
+  background: var(--color-ink);
+}

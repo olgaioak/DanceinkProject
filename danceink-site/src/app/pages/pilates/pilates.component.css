@@ -1,0 +1,116 @@
+.pilates-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: var(--color-sage-soft);
+}
+
+.pilates-hero__content {
+  padding: var(--space-2xl) var(--space-xl);
+  align-self: center;
+}
+
+.pilates-hero__description {
+  max-width: 48ch;
+  margin-bottom: var(--space-lg);
+}
+
+.pilates-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.pilates-programs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.pilates-programs__card {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.pilates-programs__card:first-child {
+  border-right: 1px solid var(--color-border);
+}
+
+.pilates-programs__card h2 {
+  margin-top: var(--space-lg);
+}
+
+.pilates-programs__card p {
+  max-width: 48ch;
+}
+
+.pilates-programs__meta {
+  margin: var(--space-md) 0 0;
+}
+
+.pilates-programs__meta div {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pilates-programs__meta dt {
+  color: var(--color-ink-muted);
+  font-size: 0.85rem;
+}
+
+.pilates-programs__meta dd {
+  margin: 0;
+  text-align: right;
+}
+
+.pilates-steps {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.pilates-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.pilates-booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--color-ink);
+  color: var(--color-background);
+}
+
+.pilates-booking__actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .pilates-hero,
+  .pilates-programs {
+    grid-template-columns: 1fr;
+  }
+
+  .pilates-programs__card:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .pilates-steps__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pilates-booking {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pilates-booking__actions a {
+    text-align: center;
+  }
+}

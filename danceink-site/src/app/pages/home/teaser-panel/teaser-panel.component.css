@@ -1,0 +1,31 @@
+.teaser-panel {
+  height: 100%;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.teaser-panel--blush {
+  background: var(--color-blush-soft);
+}
+
+.teaser-panel--sage {
+  background: var(--color-sage-soft);
+}
+
+.teaser-panel__heading {
+  max-width: 20ch;
+  margin-bottom: var(--space-lg);
+}
+
+.teaser-panel__image {
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.teaser-panel__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.teaser-panel__cta {
+  margin-top: var(--space-md);
+}

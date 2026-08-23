@@ -1,17 +1,142 @@
 {
   "HOME": {
-    "TITLE": "Welcome to Our Dance School",
-    "SUBTITLE": "Feel the rhythm, live the passion",
-    "CTA": "Join Now",
-    "ABOUT_TITLE": "About Us",
-    "ABOUT_TEXT": "We teach all levels of dancers.",
-    "DANCES_TITLE": "Our Dance Styles",
-    "CTA_TITLE": "Start Dancing Today",
-    "CTA_BUTTON": "Register"
+    "HERO_SUBTITLE": "Dance classes for every age, and Pilates on the mat and the reformer — under one roof.",
+    "EXPLORE_DANCE": "Explore Dance",
+    "EXPLORE_PILATES": "Explore Pilates",
+    "DANCE_TEASER_HEADING": "Five disciplines, from baby class to adult",
+    "SEE_ALL_DANCE_CLASSES": "See all dance classes",
+    "PILATES_TEASER_HEADING": "Mat and reformer, small groups only",
+    "PILATES_NOTE": "New to the reformer? Your first session is a private assessment so we can set the springs to you.",
+    "SEE_PILATES": "See Pilates",
+    "GROUPS_OF": "Groups of",
+    "PRIVATE": "Private",
+    "TIMETABLE_HEADING": "Weekly schedule",
+    "FULL_TIMETABLE": "Full timetable",
+    "NEXT_ON_STAGE": "Next on stage",
+    "EVENTS_AND_GALLERY": "Events & Gallery"
   },
-    "NAV": {
-    "HOME": "Home",
-    "ABOUT": "About",
-    "CONTACT": "Contact"
+  "NAV": {
+    "DANCE": "Dance",
+    "PILATES": "Pilates",
+    "TIMETABLE": "Timetable",
+    "EVENTS": "Events",
+    "STUDIO": "Studio",
+    "ALL_DANCE_CLASSES": "All dance classes"
+  },
+  "DANCE_ITEMS": {
+    "BALLET": "Ballet",
+    "MODERN_DANCE": "Modern dance",
+    "CONTEMPORARY": "Contemporary",
+    "MUSICAL": "Musical",
+    "BABY_CLASS": "Baby class"
+  },
+  "PILATES_ITEMS": {
+    "MAT": "Pilates Mat",
+    "REFORMER": "Pilates Reformer",
+    "REFORMER_1_1": "Reformer 1:1"
+  },
+  "WEEKDAYS": {
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday",
+    "sun": "Sunday"
+  },
+  "WEEKDAYS_SHORT": {
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "DANCE_DETAIL": {
+    "AGES": "Ages",
+    "STUDIO": "Studio",
+    "MAX": "Max",
+    "WHAT_CLASS_LOOKS_LIKE": "What a class looks like",
+    "WHAT_TO_BRING": "What to bring",
+    "WHEN": "When",
+    "TEACHER": "Teacher",
+    "MESSAGE_TO_HOLD_PLACE": "Message to hold a place",
+    "FREE_TRIAL": "First class is a free trial.",
+    "NOT_FOUND": "We couldn't find that class."
+  },
+  "DANCE_LIST_PAGE": {
+    "HEADING": "Five classes, from first steps to the stage",
+    "DESCRIPTION": "Everyone starts somewhere. Try any class once for free, and we'll tell you honestly which group you belong in — including the adult ones, where nobody has danced before.",
+    "AGES_2_4": "Ages 2-4",
+    "AGES_4_7": "Ages 4-7",
+    "AGES_8_11": "Ages 8-11",
+    "AGES_12_PLUS": "Ages 12+",
+    "ADULTS": "Adults",
+    "SEE_ALL_DAYS": "See all days and times",
+    "DETAILS": "Details",
+    "NOT_SURE_EYEBROW": "Not sure which one",
+    "NOT_SURE_HEADING": "Come and watch a class",
+    "NOT_SURE_BODY": "Tell us the age and we'll suggest two to sit in on. No obligation, and the first class you join is free.",
+    "MESSAGE_US": "Message us",
+    "ALSO_EYEBROW": "Also at DANCE ink",
+    "ALSO_HEADING": "Pilates, mat and reformer",
+    "ALSO_BODY": "Most of the adult dancers here do one Pilates class a week. Groups of eight on the mat, four on the reformers."
+  },
+  "PILATES_PAGE": {
+    "EYEBROW": "Pilates at DANCE ink",
+    "HEADING": "Strength that a dancer would recognise",
+    "DESCRIPTION": "Both practices come out of the same idea: control before effort. Mat classes cap at eight; the reformer room takes four, so the springs and the cueing are yours.",
+    "SEE_THE_WEEK": "See the week",
+    "FIRST_TIMER": "First-timer? Start here",
+    "CLASS_SIZE": "Class size",
+    "LENGTH": "Length",
+    "LEVEL": "Level",
+    "STEPS_HEADING": "How the first month usually goes",
+    "STEP_1_HEADING": "A private assessment",
+    "STEP_1_BODY": "Fifty minutes on the reformer, one to one, so we know your history.",
+    "STEP_2_HEADING": "Two classes a week",
+    "STEP_2_BODY": "Usually one mat, one reformer. Anything else is a bonus.",
+    "STEP_3_HEADING": "We check in at week four",
+    "STEP_3_BODY": "Adjust the plan, or add a dance class if you've caught the bug.",
+    "BOOKING_EYEBROW": "Booking",
+    "BOOKING_HEADING": "Message us with a day and a time",
+    "WHATSAPP": "WhatsApp",
+    "INSTAGRAM_DM": "Instagram DM"
+  },
+  "TIMETABLE_PAGE": {
+    "EYEBROW": "Timetable",
+    "HEADING": "Weekly schedule",
+    "ALL": "All",
+    "PRIVATE_BY_REQUEST": "Private / by request",
+    "BOOKING_NOTE": "Places are held by message. Send us the class and the day on Instagram or WhatsApp and we'll confirm the same evening.",
+    "MESSAGE_US": "Message us"
+  },
+  "EVENTS_PAGE": {
+    "EYEBROW": "Events & Gallery",
+    "HEADING": "Everything that happens outside class",
+    "ALL": "All",
+    "SHOWS": "Shows",
+    "WORKSHOPS": "Workshops",
+    "OPEN_DAYS": "Open days",
+    "NEXT": "Next",
+    "ARCHIVE_HEADING": "From the archive",
+    "PARENTS_NOTE": "Parents: photos from each show go up here within a week, and there is a private link for full-resolution downloads.",
+    "ASK_FOR_LINK": "Ask for the link"
+  },
+  "STUDIO_PAGE": {
+    "EYEBROW": "The studio",
+    "FIND_US": "Find us",
+    "TALK_TO_US": "Talk to us",
+    "WHATSAPP": "WhatsApp"
+  },
+  "FOOTER": {
+    "STUDIO": "Studio",
+    "CONTACT": "Contact",
+    "RECEPTION": "Reception",
+    "GET_DIRECTIONS": "Get Directions"
+  },
+  "MOBILE_MENU": {
+    "CLOSE": "Close"
   }
 }

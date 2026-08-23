@@ -1,0 +1,22 @@
+.cta-panel {
+  height: 100%;
+  padding: var(--space-xl);
+  background: var(--color-background);
+}
+
+.cta-panel--blush {
+  background: var(--color-blush-soft);
+}
+
+.cta-panel--sage {
+  background: var(--color-sage-soft);
+}
+
+.cta-panel__heading {
+  margin-bottom: var(--space-sm);
+}
+
+.cta-panel__body {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-lg);
+}

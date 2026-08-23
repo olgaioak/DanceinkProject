@@ -1,0 +1,48 @@
+<div class="mobile-menu">
+  <div class="mobile-menu__header">
+    <img
+      class="mobile-menu__logo"
+      src="assets/images/branding/DanceInk-Secondary-Logo-white.png"
+      alt="DANCE ink" />
+    <button type="button" class="mobile-menu__close" (click)="close.emit()">
+      {{ 'MOBILE_MENU.CLOSE' | translate }} ✕
+    </button>
+  </div>
+
+  <div class="mobile-menu__section">
+    <button type="button" class="mobile-menu__toggle mobile-menu__toggle--dance" (click)="toggleDance()">
+      {{ 'NAV.DANCE' | translate }}
+      <span>{{ isDanceExpanded ? '−' : '+' }}</span>
+    </button>
+    <div class="mobile-menu__sublist" *ngIf="isDanceExpanded">
+      <a *ngFor="let item of danceItems" [routerLink]="['/dance', item.id]" (click)="close.emit()">
+        <span>{{ item.labelKey | translate }}</span>
+        <span class="mobile-menu__age">{{ item.ageLabel }}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu__section">
+    <button type="button" class="mobile-menu__toggle mobile-menu__toggle--pilates" (click)="togglePilates()">
+      {{ 'NAV.PILATES' | translate }}
+      <span>{{ isPilatesExpanded ? '−' : '+' }}</span>
+    </button>
+    <div class="mobile-menu__sublist" *ngIf="isPilatesExpanded">
+      <a *ngFor="let item of pilatesItems" routerLink="/pilates" [fragment]="item.fragment" (click)="close.emit()">
+        <span>{{ item.labelKey | translate }}</span>
+      </a>
+    </div>
+  </div>
+
+  <a class="mobile-menu__link" routerLink="/timetable" (click)="close.emit()">{{ 'NAV.TIMETABLE' | translate }}</a>
+  <a class="mobile-menu__link" routerLink="/events" (click)="close.emit()">{{ 'NAV.EVENTS' | translate }}</a>
+  <a class="mobile-menu__link" routerLink="/studio" (click)="close.emit()">{{ 'NAV.STUDIO' | translate }}</a>
+
+  <div class="mobile-menu__footer">
+    <app-language-switcher></app-language-switcher>
+    <p class="mobile-menu__contact">
+      {{ studio.phone }}<br />
+      {{ studio.email }} · {{ studio.instagramHandle }}
+    </p>
+  </div>
+</div>

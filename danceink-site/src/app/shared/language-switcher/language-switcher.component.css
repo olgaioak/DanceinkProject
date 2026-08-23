@@ -1,0 +1,28 @@
+.lang-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+}
+
+.lang-buttons button {
+  border: none;
+  background: transparent;
+  padding: var(--space-2xs);
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.5;
+  font: inherit;
+}
+
+.lang-buttons button.is-active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-buttons__divider {
+  opacity: 0.4;
+}

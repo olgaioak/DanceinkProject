@@ -1,0 +1,16 @@
+<div class="contact-info" [ngClass]="'contact-info--' + tone">
+  <div class="contact-info__group">
+    <p class="eyebrow-text">{{ 'FOOTER.STUDIO' | translate }}</p>
+    <p>{{ studio.addressLines[0] }}<br />{{ studio.addressLines[1] }}</p>
+  </div>
+
+  <div class="contact-info__group">
+    <p class="eyebrow-text">{{ 'FOOTER.CONTACT' | translate }}</p>
+    <p>{{ studio.phone }}<br /><a [href]="'mailto:' + studio.email">{{ studio.email }}</a></p>
+  </div>
+
+  <div class="contact-info__group">
+    <p class="eyebrow-text">{{ 'FOOTER.RECEPTION' | translate }}</p>
+    <p *ngFor="let hours of studio.receptionHours">{{ hours.days }} {{ hours.hours }}</p>
+  </div>
+</div>

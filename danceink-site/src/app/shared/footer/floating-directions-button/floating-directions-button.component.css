@@ -1,0 +1,18 @@
+.floating-directions {
+  position: absolute;
+  z-index: 1;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-background);
+  color: var(--color-ink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  line-height: 1.3;
+}

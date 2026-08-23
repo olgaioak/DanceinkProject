@@ -1,36 +1,79 @@
-<section>
-  <img src="assets/images/antagonistikotitaframeEL.jpg">
-</section><!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>{{ 'HOME.TITLE' | translate }}</h1>
-    <p>{{ 'HOME.SUBTITLE' | translate }}</p>
-    <button>{{ 'HOME.CTA' | translate }}</button>
-    <button (click)="switchLang('en')">EN</button>
-    <button (click)="switchLang('el')">GR</button>
+  <app-image-placeholder label="Studio hero photo" tone="dark" [fill]="true"></app-image-placeholder>
+  <div class="hero__content">
+    <img class="hero__logo" src="assets/images/branding/DanceInk-Secondary-Logo-white.png" alt="DANCE ink" />
+    <p class="hero__subtitle">{{ 'HOME.HERO_SUBTITLE' | translate }}</p>
+    <div class="hero__actions">
+      <a appButton="solid-tint" tone="blush" routerLink="/dance">{{ 'HOME.EXPLORE_DANCE' | translate }}</a>
+      <a appButton="outline" routerLink="/pilates">{{ 'HOME.EXPLORE_PILATES' | translate }}</a>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>{{ 'HOME.ABOUT_TITLE' | translate }}</h2>
-  <p>{{ 'HOME.ABOUT_TEXT' | translate }}</p>
+<section class="teasers">
+  <app-teaser-panel
+    class="teasers__panel"
+    eyebrowNumber="01"
+    [eyebrowLabel]="'NAV.DANCE' | translate"
+    [heading]="'HOME.DANCE_TEASER_HEADING' | translate"
+    imageLabel="Ballet barre, landscape"
+    imageRatio="3:2"
+    tone="blush">
+    <div list>
+      <a
+        *ngFor="let dance of dances$ | async"
+        class="teaser-list-item"
+        [routerLink]="['/dance', dance.id]">
+        <span>{{ dance.labelKey | translate }}</span>
+        <span class="teaser-list-item__meta">{{ dance.ageRange | ageRange }}</span>
+      </a>
+    </div>
+    <a cta class="teaser-panel__link" routerLink="/dance">{{ 'HOME.SEE_ALL_DANCE_CLASSES' | translate }} →</a>
+  </app-teaser-panel>
+
+  <app-teaser-panel
+    class="teasers__panel"
+    eyebrowNumber="02"
+    [eyebrowLabel]="'NAV.PILATES' | translate"
+    [heading]="'HOME.PILATES_TEASER_HEADING' | translate"
+    imageLabel="Reformer studio, landscape"
+    imageRatio="3:2"
+    tone="sage">
+    <div list>
+      <div *ngFor="let program of pilatesPrograms$ | async" class="teaser-list-item">
+        <span>{{ program.labelKey | translate }}</span>
+        <span class="teaser-list-item__meta" *ngIf="program.classSize === 'private'; else groupSize">
+          {{ 'HOME.PRIVATE' | translate }}
+        </span>
+        <ng-template #groupSize>
+          <span class="teaser-list-item__meta">{{ 'HOME.GROUPS_OF' | translate }} {{ program.classSize }}</span>
+        </ng-template>
+      </div>
+      <p class="teasers__note">{{ 'HOME.PILATES_NOTE' | translate }}</p>
+    </div>
+    <a cta class="teaser-panel__link" routerLink="/pilates">{{ 'HOME.SEE_PILATES' | translate }} →</a>
+  </app-teaser-panel>
 </section>
 
-<!-- DANCES -->
-<section class="dances">
-  <h2>{{ 'HOME.DANCES_TITLE' | translate }}</h2>
+<section class="timetable-preview">
+  <div class="timetable-preview__header">
+    <h2>{{ 'HOME.TIMETABLE_HEADING' | translate }}</h2>
+    <a routerLink="/timetable" class="timetable-preview__link">{{ 'HOME.FULL_TIMETABLE' | translate }} →</a>
+  </div>
 
-  <div class="dance-grid">
-    <app-dance-card
-      *ngFor="let dance of dances"
-      [dance]="dance">
-    </app-dance-card>
+  <div class="timetable-preview__grid">
+    <div class="timetable-preview__day" *ngFor="let day of timetablePreview$ | async">
+      <p class="eyebrow-text">{{ 'WEEKDAYS.' + day.day | translate }}</p>
+      <div class="timetable-preview__entry" *ngFor="let entry of day.entries">
+        <span>{{ entry.startTime }} {{ entry.className }}</span>
+        <span class="timetable-preview__meta">{{ entry.meta }}</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>{{ 'HOME.CTA_TITLE' | translate }}</h2>
-  <button>{{ 'HOME.CTA_BUTTON' | translate }}</button>
+<section class="stage-cta" *ngIf="featuredEvent$ | async as event">
+  <p class="eyebrow-text">{{ 'HOME.NEXT_ON_STAGE' | translate }}</p>
+  <h2>{{ event.title }}, {{ event.venue }} — {{ event.date | date: 'd MMMM' }}</h2>
+  <a appButton="solid-dark" routerLink="/events">{{ 'HOME.EVENTS_AND_GALLERY' | translate }}</a>
 </section>

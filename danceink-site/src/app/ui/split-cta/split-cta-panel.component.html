@@ -1,0 +1,6 @@
+<div class="cta-panel" [ngClass]="'cta-panel--' + tone">
+  <app-section-eyebrow>{{ eyebrow }}</app-section-eyebrow>
+  <h3 class="cta-panel__heading">{{ heading }}</h3>
+  <div class="cta-panel__body"><ng-content select="[body]"></ng-content></div>
+  <div class="cta-panel__action"><ng-content select="[action]"></ng-content></div>
+</div>

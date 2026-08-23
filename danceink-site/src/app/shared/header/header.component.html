@@ -1,31 +1,33 @@
 <header class="header">
+  <a routerLink="/" class="header__logo">
+    <img src="assets/images/branding/DanceInk-Secondary-Logo-white.png" alt="DANCE ink" />
+  </a>
 
-  <div class="logo">
-    Dance Academy
-  </div>
+  <nav class="header__nav" aria-label="Primary">
+    <div class="header__nav-item header__nav-item--dropdown">
+      <button
+        type="button"
+        class="header__nav-link"
+        [class.is-active]="isDanceDropdownOpen"
+        (click)="toggleDanceDropdown()">
+        {{ 'NAV.DANCE' | translate }}
+        <span class="header__nav-caret">▾</span>
+      </button>
+      <app-nav-dropdown *ngIf="isDanceDropdownOpen" (closed)="isDanceDropdownOpen = false"></app-nav-dropdown>
+    </div>
 
-  <nav>
-    <a routerLink="/">
-      {{ 'NAV.HOME' | translate }}
-    </a>
-
-    <a href="#about">
-      {{ 'NAV.ABOUT' | translate }}
-    </a>
-
-    <a href="#contact">
-      {{ 'NAV.CONTACT' | translate }}
-    </a>
+    <a routerLink="/pilates" routerLinkActive="is-active" class="header__nav-link">{{ 'NAV.PILATES' | translate }}</a>
+    <a routerLink="/timetable" routerLinkActive="is-active" class="header__nav-link">{{ 'NAV.TIMETABLE' | translate }}</a>
+    <a routerLink="/events" routerLinkActive="is-active" class="header__nav-link">{{ 'NAV.EVENTS' | translate }}</a>
+    <a routerLink="/studio" routerLinkActive="is-active" class="header__nav-link">{{ 'NAV.STUDIO' | translate }}</a>
   </nav>
 
-  <div class="lang-buttons">
-    <button (click)="switchLang('en')">
-      EN
-    </button>
-
-    <button (click)="switchLang('el')">
-      GR
+  <div class="header__actions">
+    <app-language-switcher class="header__lang"></app-language-switcher>
+    <button type="button" class="header__burger" (click)="isMobileMenuOpen = true" aria-label="Open menu">
+      <span></span><span></span><span></span>
     </button>
   </div>
-
 </header>
+
+<app-mobile-menu *ngIf="isMobileMenuOpen" (close)="isMobileMenuOpen = false"></app-mobile-menu>

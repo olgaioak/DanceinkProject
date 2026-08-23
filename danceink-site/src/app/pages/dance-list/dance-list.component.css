@@ -1,0 +1,112 @@
+.dance-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) var(--space-xl) var(--space-lg);
+  background: var(--color-blush-soft);
+}
+
+.dance-list-header__description {
+  max-width: 56ch;
+}
+
+.dance-list-header__filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-sm);
+}
+
+.dance-list-header__link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.dance-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.dance-row:nth-child(even) {
+  direction: rtl;
+}
+
+.dance-row:nth-child(even) > * {
+  direction: ltr;
+}
+
+.dance-row__content {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.dance-row__heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dance-row__order {
+  color: var(--color-ink-muted);
+  font-size: 0.85rem;
+}
+
+.dance-row__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: var(--space-md) 0;
+}
+
+.dance-row__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.dance-row__schedule {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.dance-row__schedule span:not(:last-child)::after {
+  content: ' · ';
+}
+
+.dance-row__details {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.dance-list-cta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 860px) {
+  .dance-row,
+  .dance-list-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .dance-row:nth-child(even) {
+    direction: ltr;
+  }
+
+  .dance-list-header__filters {
+    align-items: flex-start;
+    width: 100%;
+  }
+}

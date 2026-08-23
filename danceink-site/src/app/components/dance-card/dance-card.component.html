@@ -1,6 +1,6 @@
 <div class="card" [routerLink]="['/dance', dance.id]">
-  <img [src]="dance.image" />
+  <img [src]="dance.image.src" [alt]="dance.image.alt" />
   <div class="overlay">
-    <h3>{{ dance.name }}</h3>
+    <h3>{{ dance.labelKey | translate }}</h3>
   </div>
 </div>

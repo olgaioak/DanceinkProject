@@ -1,0 +1,73 @@
+<section class="dance-list-header">
+  <div>
+    <app-section-eyebrow>{{ 'NAV.DANCE' | translate }}</app-section-eyebrow>
+    <h1>{{ 'DANCE_LIST_PAGE.HEADING' | translate }}</h1>
+    <p class="dance-list-header__description">{{ 'DANCE_LIST_PAGE.DESCRIPTION' | translate }}</p>
+  </div>
+
+  <div class="dance-list-header__filters">
+    <app-filter-tabs
+      [options]="[
+        { label: 'DANCE_LIST_PAGE.AGES_2_4' | translate, value: '2-4' },
+        { label: 'DANCE_LIST_PAGE.AGES_4_7' | translate, value: '4-7' },
+        { label: 'DANCE_LIST_PAGE.AGES_8_11' | translate, value: '8-11' },
+        { label: 'DANCE_LIST_PAGE.AGES_12_PLUS' | translate, value: '12+' },
+        { label: 'DANCE_LIST_PAGE.ADULTS' | translate, value: 'adults' }
+      ]"
+      [active]="selectedAgeFilter"
+      (activeChange)="onAgeFilterChange($event)">
+    </app-filter-tabs>
+    <a routerLink="/timetable" class="dance-list-header__link">{{ 'DANCE_LIST_PAGE.SEE_ALL_DAYS' | translate }} →</a>
+  </div>
+</section>
+
+<section class="dance-rows">
+  <article class="dance-row" *ngFor="let dance of filteredDances">
+    <app-image-placeholder
+      [label]="dance.image.alt"
+      [ratio]="dance.image.aspectRatio"
+      [tone]="dance.order % 2 === 1 ? 'blush' : 'neutral'">
+    </app-image-placeholder>
+
+    <div class="dance-row__content">
+      <div class="dance-row__heading-row">
+        <h2>{{ dance.labelKey | translate }}</h2>
+        <span class="dance-row__order">{{ '0' + dance.order }}</span>
+      </div>
+
+      <div class="dance-row__badges">
+        <app-badge>{{ dance.ageRange | ageRange }}</app-badge>
+        <app-badge *ngIf="dance.ageGroups.includes('adults')">{{ 'DANCE_LIST_PAGE.ADULTS' | translate }}</app-badge>
+        <app-badge>{{ dance.durationMinutes }}′</app-badge>
+        <app-badge>{{ 'DANCE_DETAIL.MAX' | translate }} {{ dance.maxCapacity }}</app-badge>
+      </div>
+
+      <p>{{ dance.shortDescription }}</p>
+
+      <div class="dance-row__footer">
+        <div class="dance-row__schedule">
+          <span *ngFor="let session of dance.schedule">{{ 'WEEKDAYS_SHORT.' + session.day | translate }} {{ session.startTime }}</span>
+        </div>
+        <a [routerLink]="['/dance', dance.id]" class="dance-row__details">{{ 'DANCE_LIST_PAGE.DETAILS' | translate }} →</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="dance-list-cta">
+  <app-split-cta-panel
+    [eyebrow]="'DANCE_LIST_PAGE.NOT_SURE_EYEBROW' | translate"
+    [heading]="'DANCE_LIST_PAGE.NOT_SURE_HEADING' | translate"
+    tone="neutral">
+    <p body>{{ 'DANCE_LIST_PAGE.NOT_SURE_BODY' | translate }}</p>
+    <button action type="button" appButton="solid-dark">{{ 'DANCE_LIST_PAGE.MESSAGE_US' | translate }}</button>
+  </app-split-cta-panel>
+
+  <app-split-cta-panel
+    [eyebrow]="'DANCE_LIST_PAGE.ALSO_EYEBROW' | translate"
+    [heading]="'DANCE_LIST_PAGE.ALSO_HEADING' | translate"
+    tone="sage">
+    <p body>{{ 'DANCE_LIST_PAGE.ALSO_BODY' | translate }}</p>
+    <a action routerLink="/pilates" appButton="outline">{{ 'HOME.SEE_PILATES' | translate }}</a>
+  </app-split-cta-panel>
+</section>

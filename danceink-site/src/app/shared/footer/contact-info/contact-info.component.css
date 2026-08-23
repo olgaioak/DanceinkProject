@@ -1,0 +1,33 @@
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.contact-info__group p {
+  margin: 0 0 var(--space-2xs);
+  font-size: 0.9rem;
+}
+
+.contact-info--dark {
+  color: rgba(255, 249, 245, 0.85);
+}
+
+.contact-info--dark .eyebrow-text {
+  color: rgba(255, 249, 245, 0.5);
+}
+
+.contact-info--dark a {
+  color: inherit;
+}
+
+.contact-info--light {
+  color: var(--color-ink);
+}
+
+@media (max-width: 720px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
