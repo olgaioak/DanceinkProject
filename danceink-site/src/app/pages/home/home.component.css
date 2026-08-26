@@ -1,38 +1,7 @@
-.hero {
-  position: relative;
-  min-height: 640px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero__content {
-  position: relative;
-  z-index: 1;
-  max-width: 640px;
-  margin: 0 auto;
-  padding: var(--space-xl);
-  text-align: center;
-}
-
-.hero__logo {
-  width: min(100%, 480px);
+.hero__photo {
+  width: 100%;
   height: auto;
-  margin: 0 auto var(--space-lg);
-  filter: brightness(0) invert(1);
-}
-
-.hero__subtitle {
-  color: var(--color-background);
-  font-size: 1.05rem;
-  margin-bottom: var(--space-xl);
-}
-
-.hero__actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
+  display: block;
 }
 
 .teasers {

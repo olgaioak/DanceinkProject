@@ -1,27 +1,23 @@
 import { StudioInfo } from './models';
 
+// Contact details, address, and social links are real, transcribed from danceink.gr.
+// Bio text moved to i18n (STUDIO_PAGE.BIO) since it's real content that needs both languages.
+// The map/portrait/studio photo assets have no real-site source and remain placeholder
+// pending real content.
 export const STUDIO: StudioInfo = {
   brandName: 'DANCE ink',
   ownerName: 'Ioanna Kanellopoulou',
-  bio: [
-    'Trained in classical ballet and contemporary, certified in mat and reformer Pilates. She opened DANCE ink to keep both practices in the same room, because the students who do them together move differently.',
-    'Two studios: a sprung floor with a barre and mirrors, and a smaller room with four reformers. Changing room, showers, and somewhere for parents to sit.'
-  ],
-  addressLines: ['Λεωφ. Παράδειγμα 24', 'Αθήνα 115 21'],
-  phone: '+30 210 000 0000',
-  email: 'hello@danceink.gr',
-  instagramHandle: '@danceink',
+  addressLines: ['Σταδίου 48-52', 'Νέα Σμύρνη 171 23'],
+  phone: '+30 21 0932 9479',
+  email: 'danceink.gr@gmail.com',
+  instagramHandle: '@danceink.gr',
   receptionHours: [
-    { days: 'Mon–Fri', hours: '08:00–21:30' },
-    { days: 'Sat', hours: '09:00–14:00' }
+    { days: 'FOOTER.MON_FRI', hours: '18:00–21:00' }
   ],
-  directionsUrl: '#',
+  directionsUrl: 'https://www.google.com/maps/search/?api=1&query=Σταδίου+48-52,+Νέα+Σμύρνη+171+23',
   socialLinks: [
-    { label: 'Instagram', url: 'https://instagram.com/danceink' },
-    { label: 'Facebook', url: 'https://facebook.com/danceink' },
-    { label: 'Timetable', url: '/timetable' },
-    { label: 'Events', url: '/events' },
-    { label: 'Terms', url: '/terms' }
+    { label: 'Instagram', url: 'https://instagram.com/danceink.gr' },
+    { label: 'Facebook', url: 'https://facebook.com/danceink.gr' }
   ],
   portrait: {
     src: 'assets/images/studio/portrait.jpg',

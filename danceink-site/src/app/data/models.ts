@@ -33,7 +33,7 @@ export interface DanceDiscipline {
   durationMinutes: number;
   maxCapacity: number;
   studio: string;
-  shortDescription: string;
+  shortDescriptionKey: string;
   aboutClass: string;
   whatToBring: string;
   teacher: string;
@@ -47,7 +47,7 @@ export interface PilatesProgram {
   classSize: number | 'private';
   durationMinutes: number;
   level: string;
-  description: string;
+  descriptionKey: string;
   image: ImageAsset;
   schedule: ClassSession[];
 }
@@ -88,7 +88,7 @@ export interface ArchivePhoto {
 }
 
 export interface ReceptionHours {
-  days: string;
+  days: string; // i18n key, e.g. 'FOOTER.MON_FRI' — translated in the template
   hours: string;
 }
 
@@ -100,7 +100,6 @@ export interface SocialLink {
 export interface StudioInfo {
   brandName: string;
   ownerName: string;
-  bio: string[];
   addressLines: string[];
   phone: string;
   email: string;

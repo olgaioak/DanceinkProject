@@ -5,7 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { Observable, switchMap } from 'rxjs';
 
 import { DanceService } from '../../services/dance.service';
-import { DanceDiscipline } from '../../data/models';
+import { StudioService } from '../../services/studio.service';
+import { DanceDiscipline, StudioInfo } from '../../data/models';
 
 import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
 import { BadgeComponent } from '../../ui/badge/badge.component';
@@ -33,10 +34,12 @@ import { AgeRangePipe } from '../../ui/age-range/age-range.pipe';
 })
 export class DanceDetailsComponent {
   dance$: Observable<DanceDiscipline | undefined>;
+  studio$: Observable<StudioInfo>;
 
-  constructor(route: ActivatedRoute, danceService: DanceService) {
+  constructor(route: ActivatedRoute, danceService: DanceService, studioService: StudioService) {
     this.dance$ = route.paramMap.pipe(
       switchMap((params) => danceService.getById(params.get('id') ?? ''))
     );
+    this.studio$ = studioService.get();
   }
 }

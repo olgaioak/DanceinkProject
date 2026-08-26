@@ -21,6 +21,11 @@
   margin-bottom: var(--space-lg);
 }
 
+.teaser-panel__photo {
+  width: 100%;
+  object-fit: cover;
+}
+
 .teaser-panel__list {
   display: flex;
   flex-direction: column;

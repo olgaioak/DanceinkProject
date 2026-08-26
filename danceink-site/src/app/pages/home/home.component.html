@@ -1,13 +1,5 @@
 <section class="hero">
-  <app-image-placeholder label="Studio hero photo" tone="dark" [fill]="true"></app-image-placeholder>
-  <div class="hero__content">
-    <img class="hero__logo" src="assets/images/branding/DanceInk-Secondary-Logo-white.png" alt="DANCE ink" />
-    <p class="hero__subtitle">{{ 'HOME.HERO_SUBTITLE' | translate }}</p>
-    <div class="hero__actions">
-      <a appButton="solid-tint" tone="blush" routerLink="/dance">{{ 'HOME.EXPLORE_DANCE' | translate }}</a>
-      <a appButton="outline" routerLink="/pilates">{{ 'HOME.EXPLORE_PILATES' | translate }}</a>
-    </div>
-  </div>
+  <img class="hero__photo" src="assets/images/homepage/homepage_banner.jpeg" alt="DANCE ink — dance school and Pilates studio" />
 </section>
 
 <section class="teasers">
@@ -65,14 +57,14 @@
     <div class="timetable-preview__day" *ngFor="let day of timetablePreview$ | async">
       <p class="eyebrow-text">{{ 'WEEKDAYS.' + day.day | translate }}</p>
       <div class="timetable-preview__entry" *ngFor="let entry of day.entries">
-        <span>{{ entry.startTime }} {{ entry.className }}</span>
+        <span>{{ entry.startTime }} {{ entry.className | translate }}</span>
         <span class="timetable-preview__meta">{{ entry.meta }}</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stage-cta" *ngIf="featuredEvent$ | async as event">
+<section class="stage-cta" *ngIf="showNextOnStage && (featuredEvent$ | async) as event">
   <p class="eyebrow-text">{{ 'HOME.NEXT_ON_STAGE' | translate }}</p>
   <h2>{{ event.title }}, {{ event.venue }} — {{ event.date | date: 'd MMMM' }}</h2>
   <a appButton="solid-dark" routerLink="/events">{{ 'HOME.EVENTS_AND_GALLERY' | translate }}</a>

@@ -1,9 +1,6 @@
 {
   "HOME": {
-    "HERO_SUBTITLE": "Dance classes for every age, and Pilates on the mat and the reformer — under one roof.",
-    "EXPLORE_DANCE": "Explore Dance",
-    "EXPLORE_PILATES": "Explore Pilates",
-    "DANCE_TEASER_HEADING": "Five disciplines, from baby class to adult",
+    "DANCE_TEASER_HEADING": "Five disciplines, from early years to adult",
     "SEE_ALL_DANCE_CLASSES": "See all dance classes",
     "PILATES_TEASER_HEADING": "Mat and reformer, small groups only",
     "PILATES_NOTE": "New to the reformer? Your first session is a private assessment so we can set the springs to you.",
@@ -25,10 +22,10 @@
   },
   "DANCE_ITEMS": {
     "BALLET": "Ballet",
-    "MODERN_DANCE": "Modern dance",
+    "MODERN_MUSICAL": "Modern - Musical",
     "CONTEMPORARY": "Contemporary",
-    "MUSICAL": "Musical",
-    "BABY_CLASS": "Baby class"
+    "MUSIC_MOVEMENT": "Music & Movement",
+    "BALLET_WORKOUT": "Ballet Workout"
   },
   "PILATES_ITEMS": {
     "MAT": "Pilates Mat",
@@ -53,6 +50,18 @@
     "sat": "Sat",
     "sun": "Sun"
   },
+  "DANCE_CONTENT": {
+    "BALLET": "Ballet is a classical form of dance based on strict technique, harmony of movement, and expressiveness, combining music and theatre.",
+    "MODERN_MUSICAL": "Modern dance is a style of dance that developed as a reaction against classical ballet.",
+    "CONTEMPORARY": "Contemporary dance is a style of dance that emphasises freedom of movement and personal expression.",
+    "MUSIC_MOVEMENT": "Music and movement education is a teaching method that combines music and movement, helping children express themselves creatively.",
+    "BALLET_WORKOUT": "A fitness class inspired by ballet, with strength and conditioning work at the barre and on the floor."
+  },
+  "PILATES_CONTENT": {
+    "MAT": "Pilates Mat is the form of Pilates performed on a mat, using body weight as the main resistance.",
+    "REFORMER": "Pilates Reformer is a form of Pilates performed on a special apparatus with springs, pulleys, and a moving platform.",
+    "REFORMER_1_1": "New to the reformer? Your first session is a private assessment so we can set the springs to you."
+  },
   "DANCE_DETAIL": {
     "AGES": "Ages",
     "STUDIO": "Studio",
@@ -61,8 +70,7 @@
     "WHAT_TO_BRING": "What to bring",
     "WHEN": "When",
     "TEACHER": "Teacher",
-    "MESSAGE_TO_HOLD_PLACE": "Message to hold a place",
-    "FREE_TRIAL": "First class is a free trial.",
+    "MESSAGE_TO_HOLD_PLACE": "Contact us",
     "NOT_FOUND": "We couldn't find that class."
   },
   "DANCE_LIST_PAGE": {
@@ -98,19 +106,17 @@
     "STEP_2_HEADING": "Two classes a week",
     "STEP_2_BODY": "Usually one mat, one reformer. Anything else is a bonus.",
     "STEP_3_HEADING": "We check in at week four",
-    "STEP_3_BODY": "Adjust the plan, or add a dance class if you've caught the bug.",
-    "BOOKING_EYEBROW": "Booking",
-    "BOOKING_HEADING": "Message us with a day and a time",
-    "WHATSAPP": "WhatsApp",
-    "INSTAGRAM_DM": "Instagram DM"
+    "STEP_3_BODY": "Adjust the plan, or add a dance class if you've caught the bug."
+  },
+  "CLASS_NAMES": {
+    "BABY_MAMA_PILATES_TEENS": "Baby Mama + Pilates Teens"
   },
   "TIMETABLE_PAGE": {
     "EYEBROW": "Timetable",
     "HEADING": "Weekly schedule",
     "ALL": "All",
     "PRIVATE_BY_REQUEST": "Private / by request",
-    "BOOKING_NOTE": "Places are held by message. Send us the class and the day on Instagram or WhatsApp and we'll confirm the same evening.",
-    "MESSAGE_US": "Message us"
+    "BOOKING_NOTE": "Call us for more information."
   },
   "EVENTS_PAGE": {
     "EYEBROW": "Events & Gallery",
@@ -126,15 +132,15 @@
   },
   "STUDIO_PAGE": {
     "EYEBROW": "The studio",
-    "FIND_US": "Find us",
-    "TALK_TO_US": "Talk to us",
+    "BIO": "After 10 years of experience in the world of dance, and under the artistic direction of Ioanna Kanellopoulou, DanceInk was created — a contemporary space for expression, creativity, and growth.",
     "WHATSAPP": "WhatsApp"
   },
   "FOOTER": {
     "STUDIO": "Studio",
     "CONTACT": "Contact",
     "RECEPTION": "Reception",
-    "GET_DIRECTIONS": "Get Directions"
+    "GET_DIRECTIONS": "Get Directions",
+    "MON_FRI": "Mon–Fri"
   },
   "MOBILE_MENU": {
     "CLOSE": "Close"

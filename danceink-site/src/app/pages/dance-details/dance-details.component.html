@@ -11,7 +11,7 @@
   <section class="detail-hero">
     <div class="detail-hero__content">
       <h1>{{ dance.labelKey | translate }}</h1>
-      <p class="detail-hero__description">{{ dance.shortDescription }}</p>
+      <p class="detail-hero__description">{{ dance.shortDescriptionKey | translate }}</p>
       <div class="detail-hero__badges">
         <app-badge>{{ 'DANCE_DETAIL.AGES' | translate }} {{ dance.ageRange | ageRange }}</app-badge>
         <app-badge>{{ dance.durationMinutes }}′</app-badge>
@@ -44,10 +44,13 @@
       <app-section-eyebrow>{{ 'DANCE_DETAIL.TEACHER' | translate }}</app-section-eyebrow>
       <p class="detail-body__teacher">{{ dance.teacher }}</p>
 
-      <button type="button" appButton="solid-dark" class="detail-body__cta">
+      <a
+        *ngIf="studio$ | async as studio"
+        appButton="solid-dark"
+        class="detail-body__cta"
+        [href]="'tel:' + studio.phone">
         {{ 'DANCE_DETAIL.MESSAGE_TO_HOLD_PLACE' | translate }}
-      </button>
-      <p class="detail-body__trial-note">{{ 'DANCE_DETAIL.FREE_TRIAL' | translate }}</p>
+      </a>
     </aside>
   </section>
 </ng-container>

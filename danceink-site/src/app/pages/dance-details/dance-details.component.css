@@ -64,13 +64,6 @@
   margin-bottom: var(--space-sm);
 }
 
-.detail-body__trial-note {
-  margin: 0;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--color-ink-muted);
-}
-
 .detail-not-found {
   padding: var(--space-2xl) var(--space-xl);
   text-align: center;

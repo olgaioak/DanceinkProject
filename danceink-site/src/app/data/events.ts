@@ -11,7 +11,7 @@ export const EVENTS: StudioEvent[] = [
     title: 'Annual show',
     venue: 'Pallas Theatre',
     description:
-      'Every group performs, from baby class to the adult contemporary piece. Doors 19:00, curtain 19:30. Tickets through the studio from May.',
+      'Every group performs, from music and movement to the adult contemporary piece. Doors 19:00, curtain 19:30. Tickets through the studio from May.',
     ctaLabel: 'Details',
     ctaLink: '#',
     image: { src: 'assets/images/events/annual-show.jpg', alt: 'Annual show at Pallas Theatre', aspectRatio: '16:10' }

@@ -10,7 +10,6 @@ import { TimetableService } from '../../services/timetable.service';
 import { EventsService } from '../../services/events.service';
 import { DanceDiscipline, PilatesProgram, StudioEvent, TimetableEntry, Weekday } from '../../data/models';
 
-import { ImagePlaceholderComponent } from '../../ui/image-placeholder/image-placeholder.component';
 import { ButtonDirective } from '../../ui/button/button.directive';
 import { AgeRangePipe } from '../../ui/age-range/age-range.pipe';
 import { TeaserPanelComponent } from './teaser-panel/teaser-panel.component';
@@ -27,7 +26,6 @@ interface TimetableDayPreview {
     CommonModule,
     RouterModule,
     TranslateModule,
-    ImagePlaceholderComponent,
     ButtonDirective,
     AgeRangePipe,
     TeaserPanelComponent
@@ -36,6 +34,9 @@ interface TimetableDayPreview {
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  // Hidden for now (no events content yet) — set back to true to bring it back, nothing else to change.
+  showNextOnStage = false;
+
   private readonly previewDays: Weekday[] = ['mon', 'tue', 'wed', 'thu'];
 
   dances$: Observable<DanceDiscipline[]>;

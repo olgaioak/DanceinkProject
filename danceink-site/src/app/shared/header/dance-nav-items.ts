@@ -11,10 +11,10 @@ export interface DanceNavItem {
 
 export const DANCE_NAV_ITEMS: DanceNavItem[] = [
   { id: 'ballet', labelKey: 'DANCE_ITEMS.BALLET', ageLabel: '4+' },
-  { id: 'modern-dance', labelKey: 'DANCE_ITEMS.MODERN_DANCE', ageLabel: '8+' },
-  { id: 'contemporary', labelKey: 'DANCE_ITEMS.CONTEMPORARY', ageLabel: '12+' },
-  { id: 'musical', labelKey: 'DANCE_ITEMS.MUSICAL', ageLabel: '10+' },
-  { id: 'baby-class', labelKey: 'DANCE_ITEMS.BABY_CLASS', ageLabel: '2-4' }
+  { id: 'modern-musical', labelKey: 'DANCE_ITEMS.MODERN_MUSICAL', ageLabel: '6+' },
+  { id: 'contemporary', labelKey: 'DANCE_ITEMS.CONTEMPORARY', ageLabel: '6+' },
+  { id: 'music-movement', labelKey: 'DANCE_ITEMS.MUSIC_MOVEMENT', ageLabel: '2-4' },
+  { id: 'ballet-workout', labelKey: 'DANCE_ITEMS.BALLET_WORKOUT', ageLabel: '18+' }
 ];
 
 export interface PilatesNavItem {

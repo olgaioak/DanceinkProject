@@ -15,5 +15,10 @@ export class TeaserPanelComponent {
   @Input() heading = '';
   @Input() imageLabel = 'Photo';
   @Input() imageRatio: PlaceholderRatio = '3:2';
+  @Input() imageSrc: string | null = null;
   @Input() tone: 'blush' | 'sage' = 'blush';
+
+  get aspectRatio(): string {
+    return this.imageRatio.replace(':', ' / ');
+  }
 }

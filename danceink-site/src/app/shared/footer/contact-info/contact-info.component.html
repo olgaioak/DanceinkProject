@@ -11,6 +11,6 @@
 
   <div class="contact-info__group">
     <p class="eyebrow-text">{{ 'FOOTER.RECEPTION' | translate }}</p>
-    <p *ngFor="let hours of studio.receptionHours">{{ hours.days }} {{ hours.hours }}</p>
+    <p *ngFor="let hours of studio.receptionHours">{{ hours.days | translate }} {{ hours.hours }}</p>
   </div>
 </div>

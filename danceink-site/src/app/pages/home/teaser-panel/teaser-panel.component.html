@@ -1,12 +1,20 @@
 <div class="teaser-panel" [ngClass]="'teaser-panel--' + tone">
   <p class="eyebrow-text">{{ eyebrowNumber }} — {{ eyebrowLabel }}</p>
   <h2 class="teaser-panel__heading">{{ heading }}</h2>
-  <app-image-placeholder
-    class="teaser-panel__image"
-    [label]="imageLabel"
-    [ratio]="imageRatio"
-    [tone]="tone">
-  </app-image-placeholder>
+  <img
+    *ngIf="imageSrc; else placeholderImage"
+    class="teaser-panel__image teaser-panel__photo"
+    [src]="imageSrc"
+    [alt]="imageLabel"
+    [style.aspectRatio]="aspectRatio" />
+  <ng-template #placeholderImage>
+    <app-image-placeholder
+      class="teaser-panel__image"
+      [label]="imageLabel"
+      [ratio]="imageRatio"
+      [tone]="tone">
+    </app-image-placeholder>
+  </ng-template>
   <div class="teaser-panel__list"><ng-content select="[list]"></ng-content></div>
   <div class="teaser-panel__cta"><ng-content select="[cta]"></ng-content></div>
 </div>

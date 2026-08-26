@@ -5,9 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { map, Observable } from 'rxjs';
 
 import { PilatesService } from '../../services/pilates.service';
-import { StudioService } from '../../services/studio.service';
-import { PilatesProgram, StudioInfo } from '../../data/models';
-import { toInstagramUrl, toWhatsAppUrl } from '../../shared/utils/contact-links';
+import { PilatesProgram } from '../../data/models';
 
 import { SectionEyebrowComponent } from '../../ui/section-eyebrow/section-eyebrow.component';
 import { ButtonDirective } from '../../ui/button/button.directive';
@@ -31,18 +29,8 @@ import { StepCardComponent } from '../../ui/step-card/step-card.component';
 })
 export class PilatesComponent {
   groupPrograms$: Observable<PilatesProgram[]>;
-  studio$: Observable<StudioInfo>;
 
-  constructor(pilatesService: PilatesService, studioService: StudioService) {
+  constructor(pilatesService: PilatesService) {
     this.groupPrograms$ = pilatesService.getAll().pipe(map((programs) => programs.filter((p) => p.id !== 'reformer-1-1')));
-    this.studio$ = studioService.get();
-  }
-
-  whatsAppUrl(studio: StudioInfo): string {
-    return toWhatsAppUrl(studio.phone);
-  }
-
-  instagramUrl(studio: StudioInfo): string {
-    return toInstagramUrl(studio);
   }
 }

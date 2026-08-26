@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 import { TimetableService } from '../../services/timetable.service';
 import { StudioService } from '../../services/studio.service';
 import { StudioInfo, TimetableEntry, Weekday } from '../../data/models';
-import { toWhatsAppUrl } from '../../shared/utils/contact-links';
 
 import { SectionEyebrowComponent } from '../../ui/section-eyebrow/section-eyebrow.component';
 import { ButtonDirective } from '../../ui/button/button.directive';
@@ -25,7 +24,7 @@ interface TimetableDay {
   styleUrl: './timetable.component.css'
 })
 export class TimetableComponent implements OnInit {
-  private readonly days: Weekday[] = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+  private readonly days: Weekday[] = ['mon', 'tue', 'wed', 'thu', 'fri'];
   private allEntries: TimetableEntry[] = [];
 
   selectedDay: Weekday = 'mon';
@@ -43,16 +42,14 @@ export class TimetableComponent implements OnInit {
   get timetableByDay(): TimetableDay[] {
     return this.days.map((day) => ({
       day,
-      entries: this.allEntries.filter((entry) => entry.day === day && this.matchesCategory(entry))
+      entries: this.allEntries
+        .filter((entry) => entry.day === day && this.matchesCategory(entry))
+        .sort((a, b) => a.startTime.localeCompare(b.startTime))
     }));
   }
 
   onDayChange(day: string): void {
     this.selectedDay = day as Weekday;
-  }
-
-  whatsAppUrl(phone: string): string {
-    return toWhatsAppUrl(phone);
   }
 
   private matchesCategory(entry: TimetableEntry): boolean {

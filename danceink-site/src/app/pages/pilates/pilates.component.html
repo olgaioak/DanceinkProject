@@ -19,7 +19,7 @@
       [tone]="program.id === 'mat' ? 'blush' : 'sage'">
     </app-image-placeholder>
     <h2>{{ program.labelKey | translate }}</h2>
-    <p>{{ program.description }}</p>
+    <p>{{ program.descriptionKey | translate }}</p>
     <dl class="pilates-programs__meta">
       <div>
         <dt>{{ 'PILATES_PAGE.CLASS_SIZE' | translate }}</dt>
@@ -49,18 +49,5 @@
     <app-step-card stepNumber="03" [heading]="'PILATES_PAGE.STEP_3_HEADING' | translate" tone="sage">
       {{ 'PILATES_PAGE.STEP_3_BODY' | translate }}
     </app-step-card>
-  </div>
-</section>
-
-<section class="pilates-booking" *ngIf="studio$ | async as studio">
-  <app-section-eyebrow>{{ 'PILATES_PAGE.BOOKING_EYEBROW' | translate }}</app-section-eyebrow>
-  <h2>{{ 'PILATES_PAGE.BOOKING_HEADING' | translate }}</h2>
-  <div class="pilates-booking__actions">
-    <a appButton="solid-tint" tone="sage" [href]="whatsAppUrl(studio)" target="_blank" rel="noopener noreferrer">
-      {{ 'PILATES_PAGE.WHATSAPP' | translate }}
-    </a>
-    <a appButton="outline" [href]="instagramUrl(studio)" target="_blank" rel="noopener noreferrer">
-      {{ 'PILATES_PAGE.INSTAGRAM_DM' | translate }}
-    </a>
   </div>
 </section>

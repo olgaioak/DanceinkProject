@@ -73,23 +73,6 @@
   margin-top: var(--space-xl);
 }
 
-.pilates-booking {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  padding: var(--space-2xl) var(--space-xl);
-  background: var(--color-ink);
-  color: var(--color-background);
-}
-
-.pilates-booking__actions {
-  display: flex;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-}
-
 @media (max-width: 860px) {
   .pilates-hero,
   .pilates-programs {
@@ -103,14 +86,5 @@
 
   .pilates-steps__grid {
     grid-template-columns: 1fr;
-  }
-
-  .pilates-booking {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .pilates-booking__actions a {
-    text-align: center;
   }
 }

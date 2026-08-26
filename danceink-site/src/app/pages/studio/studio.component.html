@@ -4,7 +4,7 @@
       <app-section-eyebrow>{{ 'STUDIO_PAGE.EYEBROW' | translate }}</app-section-eyebrow>
       <h1>{{ studio.ownerName }}</h1>
       <img class="studio-intro__mark" src="assets/images/branding/DanceInk-Compact-Logo-white.png" alt="" />
-      <p *ngFor="let paragraph of studio.bio">{{ paragraph }}</p>
+      <p>{{ 'STUDIO_PAGE.BIO' | translate }}</p>
     </div>
     <app-image-placeholder
       class="studio-intro__portrait"
@@ -25,19 +25,6 @@
 
   <section class="studio-contact">
     <div class="studio-contact__info">
-      <app-section-eyebrow>{{ 'STUDIO_PAGE.FIND_US' | translate }}</app-section-eyebrow>
-      <p>{{ studio.addressLines[0] }}<br />{{ studio.addressLines[1] }}</p>
-
-      <app-section-eyebrow>{{ 'STUDIO_PAGE.TALK_TO_US' | translate }}</app-section-eyebrow>
-      <p>
-        {{ studio.phone }}<br />
-        <a [href]="'mailto:' + studio.email">{{ studio.email }}</a><br />
-        {{ studio.instagramHandle }}
-      </p>
-
-      <app-section-eyebrow>{{ 'FOOTER.RECEPTION' | translate }}</app-section-eyebrow>
-      <p *ngFor="let hours of studio.receptionHours">{{ hours.days }} {{ hours.hours }}</p>
-
       <div class="studio-contact__actions">
         <a appButton="solid-dark" [href]="whatsAppUrl(studio.phone)" target="_blank" rel="noopener noreferrer">
           {{ 'STUDIO_PAGE.WHATSAPP' | translate }}

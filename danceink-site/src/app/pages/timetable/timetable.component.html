@@ -36,8 +36,7 @@
       { label: 'WEEKDAYS_SHORT.tue' | translate, value: 'tue' },
       { label: 'WEEKDAYS_SHORT.wed' | translate, value: 'wed' },
       { label: 'WEEKDAYS_SHORT.thu' | translate, value: 'thu' },
-      { label: 'WEEKDAYS_SHORT.fri' | translate, value: 'fri' },
-      { label: 'WEEKDAYS_SHORT.sat' | translate, value: 'sat' }
+      { label: 'WEEKDAYS_SHORT.fri' | translate, value: 'fri' }
     ]"
     [active]="selectedDay"
     (activeChange)="onDayChange($event)">
@@ -49,7 +48,7 @@
 
       <div class="timetable-entry" [ngClass]="'timetable-entry--' + entry.category" *ngFor="let entry of day.entries">
         <span class="timetable-entry__time">{{ entry.startTime }} — {{ entry.endTime }}</span>
-        <span class="timetable-entry__name">{{ entry.className }}</span>
+        <span class="timetable-entry__name">{{ entry.className | translate }}</span>
         <span class="timetable-entry__meta">{{ entry.meta }}</span>
       </div>
     </div>
@@ -58,9 +57,6 @@
   <div class="timetable-note" *ngIf="studio$ | async as studio">
     <p>{{ 'TIMETABLE_PAGE.BOOKING_NOTE' | translate }}</p>
     <div class="timetable-note__actions">
-      <a appButton="solid-dark" [href]="whatsAppUrl(studio.phone)" target="_blank" rel="noopener noreferrer">
-        {{ 'TIMETABLE_PAGE.MESSAGE_US' | translate }}
-      </a>
       <a appButton="outline" [href]="'tel:' + studio.phone">{{ studio.phone }}</a>
     </div>
   </div>
