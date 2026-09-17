@@ -22,21 +22,4 @@
       [tone]="photo.label === 'Studio B' ? 'sage' : 'blush'">
     </app-image-placeholder>
   </section>
-
-  <section class="studio-contact">
-    <div class="studio-contact__info">
-      <div class="studio-contact__actions">
-        <a appButton="solid-dark" [href]="whatsAppUrl(studio.phone)" target="_blank" rel="noopener noreferrer">
-          {{ 'STUDIO_PAGE.WHATSAPP' | translate }}
-        </a>
-        <a appButton="outline" [href]="studio.directionsUrl ?? '#'" target="_blank" rel="noopener noreferrer">
-          {{ 'FOOTER.GET_DIRECTIONS' | translate }}
-        </a>
-      </div>
-    </div>
-
-    <div class="studio-contact__map">
-      <app-image-placeholder label="Map — studio pin, interactive" tone="neutral" [fill]="true"></app-image-placeholder>
-    </div>
-  </section>
 </ng-container>

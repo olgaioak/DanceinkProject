@@ -58,7 +58,9 @@ export class HomeComponent {
       map((entries) =>
         this.previewDays.map((day) => ({
           day,
-          entries: entries.filter((entry) => entry.day === day)
+          entries: entries
+            .filter((entry) => entry.day === day)
+            .sort((a, b) => a.startTime.localeCompare(b.startTime))
         }))
       )
     );

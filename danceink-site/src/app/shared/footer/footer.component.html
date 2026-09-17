@@ -2,7 +2,7 @@
   <div class="footer__panel footer__panel--info">
     <img
       class="footer__logo"
-      src="assets/images/branding/DanceInk-Secondary-Logo-white.png"
+      src="assets/images/branding/DanceInk-Header-Logo.png"
       alt="DANCE ink" />
 
     <app-contact-info class="footer__contact" [studio]="studio" tone="dark"></app-contact-info>
@@ -16,7 +16,14 @@
   </div>
 
   <div class="footer__panel footer__panel--map">
-    <app-image-placeholder label="Google Maps embed" tone="dark" [fill]="true"></app-image-placeholder>
+    <iframe
+      *ngIf="mapEmbedUrl"
+      class="footer__map-frame"
+      [src]="mapEmbedUrl"
+      title="DANCE ink location"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     <app-floating-directions-button [href]="studio.directionsUrl ?? '#'"></app-floating-directions-button>
   </div>
 </footer>

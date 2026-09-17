@@ -15,6 +15,7 @@
 .detail-hero__description {
   max-width: 48ch;
   margin-bottom: var(--space-lg);
+  white-space: pre-line;
 }
 
 .detail-hero__badges {

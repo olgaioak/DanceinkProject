@@ -20,6 +20,7 @@ export const DANCES: DanceDiscipline[] = [
     maxCapacity: 12,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.BALLET',
+    aboutKey: 'DANCE_ABOUT.BALLET',
     aboutClass:
       'We start at the barre for twenty minutes, move to centre work, then finish with a combination across the floor. Younger groups spend more time on musicality and less on repetition. Twice a year the classes work towards the show, and rehearsals replace the last part of each session in the two weeks before.',
     whatToBring:
@@ -42,6 +43,7 @@ export const DANCES: DanceDiscipline[] = [
     maxCapacity: 16,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.MODERN_MUSICAL',
+    aboutKey: 'DANCE_ABOUT.MODERN_MUSICAL',
     aboutClass:
       'Classes combine routine-based modern choreography with the song and character work of musical theatre, building towards one number per term, performed at the annual show in June.',
     whatToBring: 'Comfortable clothes you can move freely in, trainers or dance sneakers, and water.',
@@ -64,6 +66,7 @@ export const DANCES: DanceDiscipline[] = [
     maxCapacity: 12,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.CONTEMPORARY',
+    aboutKey: 'DANCE_ABOUT.CONTEMPORARY',
     aboutClass:
       'Class moves from a floor-based warm-up into weight-sharing and improvisation tasks, then a set phrase that develops over several weeks.',
     whatToBring: 'Fitted, stretchy clothing, bare feet or socks, and water.',
@@ -84,6 +87,7 @@ export const DANCES: DanceDiscipline[] = [
     maxCapacity: 8,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.MUSIC_MOVEMENT',
+    aboutKey: 'DANCE_ABOUT.MUSIC_MOVEMENT',
     aboutClass:
       'Forty minutes of music, games, and moving together as a group, with simple routines that build coordination and confidence.',
     whatToBring: 'Comfortable clothes, bare feet or socks, and a favourite small toy is welcome.',
@@ -105,6 +109,7 @@ export const DANCES: DanceDiscipline[] = [
     maxCapacity: 14,
     studio: 'B',
     shortDescriptionKey: 'DANCE_CONTENT.BALLET_WORKOUT',
+    aboutKey: 'DANCE_ABOUT.BALLET_WORKOUT',
     aboutClass:
       'A fitness-focused class using ballet vocabulary — barre work for strength and posture, then floor-based conditioning. No dance experience needed.',
     whatToBring: 'Comfortable workout clothes, grip socks or bare feet, and water.',

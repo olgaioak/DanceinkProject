@@ -63,9 +63,17 @@
 .timetable-preview__entry {
   display: flex;
   flex-direction: column;
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-xs);
   font-size: 0.9rem;
+}
+
+.timetable-preview__entry--dance {
+  background: var(--color-blush-soft);
+}
+
+.timetable-preview__entry--pilates {
+  background: var(--color-grey-soft);
 }
 
 .timetable-preview__meta {

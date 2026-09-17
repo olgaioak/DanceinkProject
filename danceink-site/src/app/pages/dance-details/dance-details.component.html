@@ -11,7 +11,7 @@
   <section class="detail-hero">
     <div class="detail-hero__content">
       <h1>{{ dance.labelKey | translate }}</h1>
-      <p class="detail-hero__description">{{ dance.shortDescriptionKey | translate }}</p>
+      <p class="detail-hero__description">{{ (dance.aboutKey || dance.shortDescriptionKey) | translate }}</p>
       <div class="detail-hero__badges">
         <app-badge>{{ 'DANCE_DETAIL.AGES' | translate }} {{ dance.ageRange | ageRange }}</app-badge>
         <app-badge>{{ dance.durationMinutes }}′</app-badge>

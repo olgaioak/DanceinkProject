@@ -56,7 +56,10 @@
   <div class="timetable-preview__grid">
     <div class="timetable-preview__day" *ngFor="let day of timetablePreview$ | async">
       <p class="eyebrow-text">{{ 'WEEKDAYS.' + day.day | translate }}</p>
-      <div class="timetable-preview__entry" *ngFor="let entry of day.entries">
+      <div
+        class="timetable-preview__entry"
+        [ngClass]="'timetable-preview__entry--' + entry.category"
+        *ngFor="let entry of day.entries">
         <span>{{ entry.startTime }} {{ entry.className | translate }}</span>
         <span class="timetable-preview__meta">{{ entry.meta }}</span>
       </div>

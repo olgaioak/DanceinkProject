@@ -34,6 +34,7 @@ export interface DanceDiscipline {
   maxCapacity: number;
   studio: string;
   shortDescriptionKey: string;
+  aboutKey?: string;
   aboutClass: string;
   whatToBring: string;
   teacher: string;
