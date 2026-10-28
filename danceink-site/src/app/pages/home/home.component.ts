@@ -19,6 +19,9 @@ interface TimetableDayPreview {
   entries: TimetableEntry[];
 }
 
+// How many classes each day shows on the homepage before linking to the full timetable.
+const PREVIEW_ENTRIES_PER_DAY = 3;
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -61,6 +64,7 @@ export class HomeComponent {
           entries: entries
             .filter((entry) => entry.day === day)
             .sort((a, b) => a.startTime.localeCompare(b.startTime))
+            .slice(0, PREVIEW_ENTRIES_PER_DAY)
         }))
       )
     );

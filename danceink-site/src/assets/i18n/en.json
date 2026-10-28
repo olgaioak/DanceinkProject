@@ -9,10 +9,12 @@
     "PRIVATE": "Private",
     "TIMETABLE_HEADING": "Weekly schedule",
     "FULL_TIMETABLE": "Full timetable",
+    "MORE": "More…",
     "NEXT_ON_STAGE": "Next on stage",
     "EVENTS_AND_GALLERY": "Events & Gallery"
   },
   "NAV": {
+    "HOME": "Home",
     "DANCE": "Dance",
     "PILATES": "Pilates",
     "TIMETABLE": "Timetable",
@@ -26,6 +28,31 @@
     "CONTEMPORARY": "Contemporary",
     "MUSIC_MOVEMENT": "Music & Movement",
     "BALLET_WORKOUT": "Ballet Workout"
+  },
+  "DANCE_LEVELS": {
+    "PREPARATOIRE": "Preparatoire",
+    "BALLET_1": "Ballet 1",
+    "BALLET_2": "Ballet 2",
+    "DEGRE_1": "Degré 1",
+    "ADULT_BALLET": "Adult ballet",
+    "CHILDREN": "Children",
+    "TEENS": "Teens",
+    "ADVANCED_CONTEMPORARY": "Advanced contemporary",
+    "ADULT_CONTEMPORARY": "Adult contemporary",
+    "BABY_MAMA": "Baby Mama",
+    "BALLET_WORKOUT_NOTE": "Ballet Workout has no levels. It's a strength and conditioning class built on ballet."
+  },
+  "LEVEL_AGES": {
+    "2_TO_3_5": "2-3.5 years",
+    "3_5_TO_5": "3.5-5 years",
+    "6_TO_8": "6-8 years",
+    "9_TO_11": "9-11 years",
+    "12_TO_15": "12-15 years",
+    "6_TO_10": "6-10 years",
+    "11_TO_14": "11-14 years",
+    "11_PLUS": "11+ years",
+    "15_PLUS": "15+ years",
+    "18_PLUS": "18+ years"
   },
   "PILATES_ITEMS": {
     "MAT": "Pilates Mat",
@@ -72,12 +99,10 @@
   "DANCE_DETAIL": {
     "AGES": "Ages",
     "STUDIO": "Studio",
-    "MAX": "Max",
     "WHAT_CLASS_LOOKS_LIKE": "What a class looks like",
     "WHAT_TO_BRING": "What to bring",
-    "WHEN": "When",
-    "TEACHER": "Teacher",
-    "MESSAGE_TO_HOLD_PLACE": "Contact us",
+    "LEVELS": "Levels",
+    "VIEW_SCHEDULE": "View the schedule",
     "NOT_FOUND": "We couldn't find that class."
   },
   "DANCE_LIST_PAGE": {
@@ -92,28 +117,24 @@
     "DETAILS": "Details",
     "NOT_SURE_EYEBROW": "Not sure which one",
     "NOT_SURE_HEADING": "Come and watch a class",
-    "NOT_SURE_BODY": "Tell us the age and we'll suggest two to sit in on. No obligation, and the first class you join is free.",
-    "MESSAGE_US": "Message us",
+    "NOT_SURE_BODY": "Tell us what you're interested in and we'll suggest the class that fits you. The first class you join is free.",
+    "CONTACT_US": "Contact us",
     "ALSO_EYEBROW": "Also at DANCE ink",
     "ALSO_HEADING": "Pilates, mat and reformer",
-    "ALSO_BODY": "Most of the adult dancers here do one Pilates class a week. Groups of eight on the mat, four on the reformers."
+    "ALSO_BODY": "Combine your dance classes with a Pilates class, mat or reformer."
   },
   "PILATES_PAGE": {
     "EYEBROW": "Pilates at DANCE ink",
     "HEADING": "Strength that a dancer would recognise",
-    "DESCRIPTION": "Both practices come out of the same idea: control before effort. Mat classes cap at eight; the reformer room takes four, so the springs and the cueing are yours.",
-    "SEE_THE_WEEK": "See the week",
+    "DESCRIPTION": "Both practices come out of the same idea: control before effort. Mat classes cap at six; the reformer room takes three, so the springs and the cueing are yours.",
+    "VIEW_SCHEDULE": "View the schedule",
     "FIRST_TIMER": "First-timer? Start here",
     "CLASS_SIZE": "Class size",
     "LENGTH": "Length",
-    "LEVEL": "Level",
-    "STEPS_HEADING": "How the first month usually goes",
-    "STEP_1_HEADING": "A private assessment",
-    "STEP_1_BODY": "Fifty minutes on the reformer, one to one, so we know your history.",
-    "STEP_2_HEADING": "Two classes a week",
-    "STEP_2_BODY": "Usually one mat, one reformer. Anything else is a bonus.",
-    "STEP_3_HEADING": "We check in at week four",
-    "STEP_3_BODY": "Adjust the plan, or add a dance class if you've caught the bug."
+    "STEPS_HEADING": "According to Joseph Pilates",
+    "STEP_1_HEADING": "In 10 sessions you'll feel the difference",
+    "STEP_2_HEADING": "In 20 sessions you'll see the difference",
+    "STEP_3_HEADING": "In 30 sessions you'll have a whole new body"
   },
   "CLASS_NAMES": {
     "BABY_MAMA_PILATES_TEENS": "Baby Mama + Pilates Teens"
@@ -123,6 +144,8 @@
     "HEADING": "Weekly schedule",
     "ALL": "All",
     "PRIVATE_BY_REQUEST": "Private / by request",
+    "MORNING": "Morning",
+    "AFTERNOON": "Afternoon",
     "BOOKING_NOTE": "Call us for more information."
   },
   "EVENTS_PAGE": {

@@ -39,7 +39,13 @@ export interface DanceDiscipline {
   whatToBring: string;
   teacher: string;
   image: ImageAsset;
-  schedule: ClassSession[];
+  levels?: DanceLevel[];
+  levelsNoteKey?: string;
+}
+
+export interface DanceLevel {
+  nameKey: string;
+  agesKey?: string;
 }
 
 export interface PilatesProgram {
@@ -47,7 +53,6 @@ export interface PilatesProgram {
   labelKey: string;
   classSize: number | 'private';
   durationMinutes: number;
-  level: string;
   descriptionKey: string;
   image: ImageAsset;
   schedule: ClassSession[];

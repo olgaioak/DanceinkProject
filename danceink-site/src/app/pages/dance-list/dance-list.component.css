@@ -78,6 +78,11 @@
   color: var(--color-ink-soft);
 }
 
+/* Keep each day with its times; long schedules wrap between days. */
+.dance-row__schedule span {
+  white-space: nowrap;
+}
+
 .dance-row__schedule span:not(:last-child)::after {
   content: ' · ';
 }

@@ -41,7 +41,6 @@
           <span class="teaser-list-item__meta">{{ 'HOME.GROUPS_OF' | translate }} {{ program.classSize }}</span>
         </ng-template>
       </div>
-      <p class="teasers__note">{{ 'HOME.PILATES_NOTE' | translate }}</p>
     </div>
     <a cta class="teaser-panel__link" routerLink="/pilates">{{ 'HOME.SEE_PILATES' | translate }} →</a>
   </app-teaser-panel>
@@ -65,6 +64,10 @@
       </div>
     </div>
   </div>
+
+  <a routerLink="/timetable" class="timetable-preview__more" [title]="'HOME.FULL_TIMETABLE' | translate">
+    {{ 'HOME.MORE' | translate }}
+  </a>
 </section>
 
 <section class="stage-cta" *ngIf="showNextOnStage && (featuredEvent$ | async) as event">

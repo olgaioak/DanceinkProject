@@ -3,11 +3,10 @@ import { DanceDiscipline } from './models';
 // Restructured to match the real danceink.gr site's 4 dance departments
 // (Ballet, Modern-Musical, Contemporary, Music & Movement — plus Pilates
 // Mat/Reformer in pilates.ts). shortDescriptionKey text is translated from
-// the real site for all four; aboutClass/whatToBring/schedule/capacity have
+// the real site for all four; aboutClass/whatToBring/capacity have
 // no equivalent on the real site and remain placeholder copy.
-// Ballet Workout was added afterwards (not on the real site) — it already
-// existed as a class in the real timetable (data/timetable.ts) with no
-// discipline of its own, so its schedule below matches that real data;
+// Ballet Workout was added afterwards (not on the real site); its days and hours,
+// like every dance's, come from the real timetable (data/timetable.ts) and
 // everything else about it (capacity, aboutClass, whatToBring) is placeholder.
 export const DANCES: DanceDiscipline[] = [
   {
@@ -27,10 +26,12 @@ export const DANCES: DanceDiscipline[] = [
       'Fitted clothes you can see your line in, soft ballet shoes, hair tied back, and water. We keep spare shoes in most sizes for a first trial class.',
     teacher: 'Ioanna Kanellopoulou',
     image: { src: 'assets/images/dance/ballet.jpg', alt: 'Ballet class at the barre', aspectRatio: '3:2' },
-    schedule: [
-      { day: 'mon', startTime: '18:00', endTime: '19:00', ageNote: '4+' },
-      { day: 'thu', startTime: '18:00', endTime: '19:00', ageNote: 'adults' },
-      { day: 'sat', startTime: '11:00', endTime: '12:00', ageNote: '4-7' }
+    levels: [
+      { nameKey: 'DANCE_LEVELS.PREPARATOIRE', agesKey: 'LEVEL_AGES.3_5_TO_5' },
+      { nameKey: 'DANCE_LEVELS.BALLET_1', agesKey: 'LEVEL_AGES.6_TO_8' },
+      { nameKey: 'DANCE_LEVELS.BALLET_2', agesKey: 'LEVEL_AGES.9_TO_11' },
+      { nameKey: 'DANCE_LEVELS.DEGRE_1', agesKey: 'LEVEL_AGES.12_TO_15' },
+      { nameKey: 'DANCE_LEVELS.ADULT_BALLET', agesKey: 'LEVEL_AGES.15_PLUS' }
     ]
   },
   {
@@ -49,11 +50,9 @@ export const DANCES: DanceDiscipline[] = [
     whatToBring: 'Comfortable clothes you can move freely in, trainers or dance sneakers, and water.',
     teacher: 'Ioanna Kanellopoulou',
     image: { src: 'assets/images/dance/modern-musical.jpg', alt: 'Modern and musical theatre dance class', aspectRatio: '3:2' },
-    schedule: [
-      { day: 'mon', startTime: '19:15', endTime: '20:15' },
-      { day: 'wed', startTime: '18:30', endTime: '19:30' },
-      { day: 'fri', startTime: '19:00', endTime: '20:00' },
-      { day: 'sat', startTime: '12:00', endTime: '13:15' }
+    levels: [
+      { nameKey: 'DANCE_LEVELS.CHILDREN', agesKey: 'LEVEL_AGES.6_TO_10' },
+      { nameKey: 'DANCE_LEVELS.TEENS', agesKey: 'LEVEL_AGES.11_PLUS' }
     ]
   },
   {
@@ -72,9 +71,11 @@ export const DANCES: DanceDiscipline[] = [
     whatToBring: 'Fitted, stretchy clothing, bare feet or socks, and water.',
     teacher: 'Ioanna Kanellopoulou',
     image: { src: 'assets/images/dance/contemporary.jpg', alt: 'Contemporary dance class', aspectRatio: '3:2' },
-    schedule: [
-      { day: 'tue', startTime: '19:00', endTime: '20:15' },
-      { day: 'thu', startTime: '20:00', endTime: '21:15' }
+    levels: [
+      { nameKey: 'DANCE_LEVELS.CHILDREN', agesKey: 'LEVEL_AGES.6_TO_10' },
+      { nameKey: 'DANCE_LEVELS.TEENS', agesKey: 'LEVEL_AGES.11_TO_14' },
+      { nameKey: 'DANCE_LEVELS.ADVANCED_CONTEMPORARY', agesKey: 'LEVEL_AGES.15_PLUS' },
+      { nameKey: 'DANCE_LEVELS.ADULT_CONTEMPORARY', agesKey: 'LEVEL_AGES.18_PLUS' }
     ]
   },
   {
@@ -93,11 +94,7 @@ export const DANCES: DanceDiscipline[] = [
     whatToBring: 'Comfortable clothes, bare feet or socks, and a favourite small toy is welcome.',
     teacher: 'Ioanna Kanellopoulou',
     image: { src: 'assets/images/dance/music-movement.jpg', alt: 'Music and movement class for young children', aspectRatio: '3:2' },
-    schedule: [
-      { day: 'tue', startTime: '17:00', endTime: '17:40', studio: 'A' },
-      { day: 'fri', startTime: '17:30', endTime: '18:10', studio: 'B' },
-      { day: 'sat', startTime: '11:00', endTime: '11:40', studio: 'A' }
-    ]
+    levels: [{ nameKey: 'DANCE_LEVELS.BABY_MAMA', agesKey: 'LEVEL_AGES.2_TO_3_5' }]
   },
   {
     id: 'ballet-workout',
@@ -115,9 +112,6 @@ export const DANCES: DanceDiscipline[] = [
     whatToBring: 'Comfortable workout clothes, grip socks or bare feet, and water.',
     teacher: 'Ioanna Kanellopoulou',
     image: { src: 'assets/images/dance/ballet-workout.jpg', alt: 'Ballet-inspired fitness class', aspectRatio: '3:2' },
-    schedule: [
-      { day: 'tue', startTime: '20:30', endTime: '21:20', studio: 'B' },
-      { day: 'thu', startTime: '20:30', endTime: '21:20', studio: 'A' }
-    ]
+    levelsNoteKey: 'DANCE_LEVELS.BALLET_WORKOUT_NOTE'
   }
 ];

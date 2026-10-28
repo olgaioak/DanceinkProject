@@ -38,15 +38,13 @@
       <div class="dance-row__badges">
         <app-badge>{{ dance.ageRange | ageRange }}</app-badge>
         <app-badge *ngIf="dance.ageGroups.includes('adults')">{{ 'DANCE_LIST_PAGE.ADULTS' | translate }}</app-badge>
-        <app-badge>{{ dance.durationMinutes }}′</app-badge>
-        <app-badge>{{ 'DANCE_DETAIL.MAX' | translate }} {{ dance.maxCapacity }}</app-badge>
-      </div>
+        <app-badge>{{ dance.durationMinutes }}′</app-badge>      </div>
 
       <p>{{ dance.shortDescriptionKey | translate }}</p>
 
       <div class="dance-row__footer">
         <div class="dance-row__schedule">
-          <span *ngFor="let session of dance.schedule">{{ 'WEEKDAYS_SHORT.' + session.day | translate }} {{ session.startTime }}</span>
+          <span *ngFor="let slot of scheduleByDance[dance.id]">{{ 'WEEKDAYS_SHORT.' + slot.day | translate }} {{ slot.times.join(', ') }}</span>
         </div>
         <a [routerLink]="['/dance', dance.id]" class="dance-row__details">{{ 'DANCE_LIST_PAGE.DETAILS' | translate }} →</a>
       </div>
@@ -60,7 +58,9 @@
     [heading]="'DANCE_LIST_PAGE.NOT_SURE_HEADING' | translate"
     tone="neutral">
     <p body>{{ 'DANCE_LIST_PAGE.NOT_SURE_BODY' | translate }}</p>
-    <button action type="button" appButton="solid-dark">{{ 'DANCE_LIST_PAGE.MESSAGE_US' | translate }}</button>
+    <a *ngIf="studio$ | async as studio" action appButton="solid-dark" [href]="'tel:' + studio.phone">
+      {{ 'DANCE_LIST_PAGE.CONTACT_US' | translate }}
+    </a>
   </app-split-cta-panel>
 
   <app-split-cta-panel

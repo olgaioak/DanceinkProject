@@ -4,6 +4,14 @@
   </a>
 
   <nav class="header__nav" aria-label="Primary">
+    <a
+      routerLink="/"
+      routerLinkActive="is-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="header__nav-link">
+      {{ 'NAV.HOME' | translate }}
+    </a>
+
     <div class="header__nav-item header__nav-item--dropdown">
       <button
         type="button"

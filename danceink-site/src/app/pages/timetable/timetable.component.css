@@ -56,8 +56,40 @@
 .timetable-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: var(--space-lg);
+  grid-template-rows: auto auto auto;
+  column-gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
+}
+
+/* Each day spans the three grid rows (day name, morning, afternoon) so the
+   afternoon blocks line up across days even when mornings differ in length. */
+.timetable-grid__day {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.timetable-period {
+  padding-bottom: var(--space-md);
+}
+
+.timetable-period + .timetable-period {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.timetable-period__label {
+  margin: 0 0 var(--space-xs);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.timetable-period__empty {
+  margin: 0;
+  color: var(--color-ink-muted);
 }
 
 .timetable-entry {
@@ -100,12 +132,17 @@
   flex-wrap: wrap;
   gap: var(--space-lg);
   padding: var(--space-lg);
-  border: 1px solid var(--color-border);
+  background: var(--color-ink);
+  color: var(--color-background);
 }
 
 .timetable-note p {
   margin: 0;
   max-width: 48ch;
+}
+
+.timetable-note .btn--outline:hover {
+  background: rgba(255, 249, 245, 0.12);
 }
 
 .timetable-note__actions {

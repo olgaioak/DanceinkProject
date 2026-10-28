@@ -61,7 +61,7 @@ export const TIMETABLE: TimetableEntry[] = [
 
   // Friday
   { id: 'fri-mat-1700', day: 'fri', startTime: '17:00', endTime: '17:50', className: 'PILATES_ITEMS.MAT', category: 'pilates', meta: 'Studio B', studio: 'B', linkTo: 'mat' },
-  { id: 'fri-baby-mama-1800', day: 'fri', startTime: '18:00', endTime: '18:45', className: 'CLASS_NAMES.BABY_MAMA_PILATES_TEENS', category: 'pilates', meta: 'Studio B', studio: 'B' },
+  { id: 'fri-baby-mama-1800', day: 'fri', startTime: '18:00', endTime: '18:45', className: 'CLASS_NAMES.BABY_MAMA_PILATES_TEENS', category: 'pilates', meta: 'Studio B', studio: 'B', linkTo: 'music-movement' },
   { id: 'fri-modern-musical-1900', day: 'fri', startTime: '19:00', endTime: '20:00', className: 'DANCE_ITEMS.MODERN_MUSICAL', category: 'dance', meta: '11-14 · Studio A', studio: 'A', linkTo: 'modern-musical' },
   { id: 'fri-ballet-2000', day: 'fri', startTime: '20:00', endTime: '21:00', className: 'DANCE_ITEMS.BALLET', category: 'dance', meta: 'Adults · Studio A', studio: 'A', linkTo: 'ballet' }
 ];

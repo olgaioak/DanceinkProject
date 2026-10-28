@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 
@@ -11,10 +12,18 @@ import { SectionEyebrowComponent } from '../../ui/section-eyebrow/section-eyebro
 import { ButtonDirective } from '../../ui/button/button.directive';
 import { FilterTabsComponent } from '../../ui/filter-tabs/filter-tabs.component';
 
-interface TimetableDay {
-  day: Weekday;
+interface TimetablePeriod {
+  labelKey: string;
   entries: TimetableEntry[];
 }
+
+interface TimetableDay {
+  day: Weekday;
+  periods: TimetablePeriod[];
+}
+
+// Classes starting before this time are listed under "morning".
+const AFTERNOON_START = '14:00';
 
 @Component({
   selector: 'app-timetable',
@@ -31,21 +40,35 @@ export class TimetableComponent implements OnInit {
   selectedCategory = '';
   studio$: Observable<StudioInfo>;
 
-  constructor(private timetableService: TimetableService, studioService: StudioService) {
+  constructor(
+    private timetableService: TimetableService,
+    private route: ActivatedRoute,
+    studioService: StudioService
+  ) {
     this.studio$ = studioService.get();
   }
 
   ngOnInit(): void {
     this.timetableService.getAll().subscribe((entries) => (this.allEntries = entries));
+    this.route.queryParamMap.subscribe((params) => {
+      const category = params.get('category') ?? '';
+      this.selectedCategory = ['dance', 'pilates'].includes(category) ? category : '';
+    });
   }
 
   get timetableByDay(): TimetableDay[] {
-    return this.days.map((day) => ({
-      day,
-      entries: this.allEntries
+    return this.days.map((day) => {
+      const entries = this.allEntries
         .filter((entry) => entry.day === day && this.matchesCategory(entry))
-        .sort((a, b) => a.startTime.localeCompare(b.startTime))
-    }));
+        .sort((a, b) => a.startTime.localeCompare(b.startTime));
+      return {
+        day,
+        periods: [
+          { labelKey: 'TIMETABLE_PAGE.MORNING', entries: entries.filter((entry) => entry.startTime < AFTERNOON_START) },
+          { labelKey: 'TIMETABLE_PAGE.AFTERNOON', entries: entries.filter((entry) => entry.startTime >= AFTERNOON_START) }
+        ]
+      };
+    });
   }
 
   onDayChange(day: string): void {

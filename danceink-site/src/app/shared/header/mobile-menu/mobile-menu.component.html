@@ -9,6 +9,8 @@
     </button>
   </div>
 
+  <a class="mobile-menu__link" routerLink="/" (click)="close.emit()">{{ 'NAV.HOME' | translate }}</a>
+
   <div class="mobile-menu__section">
     <button type="button" class="mobile-menu__toggle mobile-menu__toggle--dance" (click)="toggleDance()">
       {{ 'NAV.DANCE' | translate }}

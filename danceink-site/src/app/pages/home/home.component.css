@@ -81,6 +81,23 @@
   font-size: 0.75rem;
 }
 
+.timetable-preview__more {
+  display: block;
+  width: fit-content;
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-xs) 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  transition: color 0.15s ease;
+}
+
+.timetable-preview__more:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .stage-cta {
   display: flex;
   flex-direction: column;
