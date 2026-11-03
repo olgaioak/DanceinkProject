@@ -1,8 +1,27 @@
-<img
+<button
   *ngIf="isHomePage$ | async"
+  type="button"
   class="funding-banner"
-  src="assets/images/antagonistikotitaframeEL.jpg"
-  alt="Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης — ΕΣΠΑ 2021-2027, Πρόγραμμα Ανταγωνιστικότητα" />
+  [attr.aria-label]="'FUNDING.OPEN' | translate"
+  (click)="openFundingDialog()">
+  <img
+    class="funding-banner__image"
+    src="assets/images/antagonistikotitaframeEL.jpg"
+    alt="Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης — ΕΣΠΑ 2021-2027, Πρόγραμμα Ανταγωνιστικότητα" />
+</button>
+
+<dialog #fundingDialog class="funding-dialog" aria-labelledby="funding-dialog-text" (click)="onFundingDialogClick($event)">
+  <div class="funding-dialog__content">
+    <button
+      type="button"
+      class="funding-dialog__close"
+      [attr.aria-label]="'FUNDING.CLOSE' | translate"
+      (click)="fundingDialog.close()">
+      ✕
+    </button>
+    <p id="funding-dialog-text" class="funding-dialog__text">{{ 'FUNDING.TEXT' | translate }}</p>
+  </div>
+</dialog>
 
 <app-header></app-header>
 

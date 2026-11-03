@@ -7,7 +7,9 @@
       <a appButton="solid-dark" routerLink="/timetable" [queryParams]="{ category: 'pilates' }">{{ 'PILATES_PAGE.VIEW_SCHEDULE' | translate }}</a>
     </div>
   </div>
-  <app-image-placeholder class="pilates-hero__image" label="Reformer, 4:5" ratio="4:5" tone="sage"></app-image-placeholder>
+  <div class="pilates-hero__image">
+    <app-image-placeholder label="Reformer" tone="sage" [fill]="true"></app-image-placeholder>
+  </div>
 </section>
 
 <section class="pilates-programs">

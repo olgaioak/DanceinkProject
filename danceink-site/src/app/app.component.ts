@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { filter, map, Observable, startWith } from 'rxjs';
 
 import { HeaderComponent } from './shared/header/header.component';
@@ -12,6 +12,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   standalone: true,
   imports: [CommonModule,
     RouterOutlet,
+    TranslateModule,
     HeaderComponent,
     FooterComponent],
   templateUrl: './app.component.html',
@@ -20,6 +21,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 export class AppComponent {
   title = 'danceink-site';
   isHomePage$: Observable<boolean>;
+
+  @ViewChild('fundingDialog') private fundingDialog!: ElementRef<HTMLDialogElement>;
 
   constructor(private translate: TranslateService, private router: Router) {
     this.translate.setDefaultLang('el');
@@ -31,5 +34,16 @@ export class AppComponent {
       map((event) => event.urlAfterRedirects === '/'),
       startWith(this.router.url === '/')
     );
+  }
+
+  openFundingDialog(): void {
+    this.fundingDialog.nativeElement.showModal();
+  }
+
+  /** Closes the dialog when the click lands on the backdrop rather than its content. */
+  onFundingDialogClick(event: MouseEvent): void {
+    if (event.target === this.fundingDialog.nativeElement) {
+      this.fundingDialog.nativeElement.close();
+    }
   }
 }

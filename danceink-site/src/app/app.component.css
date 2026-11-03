@@ -1,6 +1,57 @@
 .funding-banner {
   display: block;
   width: 100%;
-  height: auto;
+  padding: 0;
+  border: 0;
   background: var(--color-background);
+  cursor: pointer;
+}
+
+.funding-banner__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The dialog has no padding of its own, so a click whose target is the dialog
+   element itself can only be on the backdrop (see onFundingDialogClick). */
+.funding-dialog {
+  width: min(560px, calc(100% - 2 * var(--space-md)));
+  padding: 0;
+  border: 0;
+  background: var(--color-background);
+  color: var(--color-ink);
+}
+
+.funding-dialog::backdrop {
+  background: rgba(49, 54, 56, 0.55);
+}
+
+.funding-dialog__content {
+  position: relative;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+}
+
+.funding-dialog__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.funding-dialog__close:hover {
+  color: var(--color-ink-soft);
+}
+
+.funding-dialog__text {
+  margin: 0;
+  line-height: 1.6;
 }

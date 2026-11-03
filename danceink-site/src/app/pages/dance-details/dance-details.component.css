@@ -12,6 +12,12 @@
   background: var(--color-blush-soft);
 }
 
+/* The image fills whatever height the text column needs, so the hero is only as tall as its text. */
+.detail-hero__image {
+  position: relative;
+  min-height: 240px;
+}
+
 .detail-hero__description {
   max-width: 48ch;
   margin-bottom: var(--space-lg);
@@ -33,6 +39,16 @@
 
 .detail-body__main p {
   max-width: 60ch;
+}
+
+.detail-points {
+  max-width: 60ch;
+  margin: 0 0 var(--space-lg);
+  padding-left: 1.1em;
+}
+
+.detail-points li {
+  margin-bottom: var(--space-xs);
 }
 
 .detail-body__sidebar {
@@ -78,7 +94,8 @@
   }
 
   .detail-hero__image {
-    aspect-ratio: 1;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .detail-body {

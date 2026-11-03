@@ -35,12 +35,18 @@ export interface DanceDiscipline {
   studio: string;
   shortDescriptionKey: string;
   aboutKey?: string;
-  aboutClass: string;
-  whatToBring: string;
   teacher: string;
   image: ImageAsset;
   levels?: DanceLevel[];
   levelsNoteKey?: string;
+  /** Extra content sections shown in the main column of the dance's details page. */
+  detailSections?: DanceDetailSection[];
+}
+
+export interface DanceDetailSection {
+  headingKey: string;
+  points?: { titleKey: string; bodyKey: string }[];
+  paragraphKeys?: string[];
 }
 
 export interface DanceLevel {

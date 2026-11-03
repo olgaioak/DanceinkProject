@@ -17,17 +17,22 @@
         <app-badge>{{ dance.durationMinutes }}′</app-badge>
         <app-badge>{{ 'DANCE_DETAIL.STUDIO' | translate }} {{ dance.studio }}</app-badge>      </div>
     </div>
-    <app-image-placeholder class="detail-hero__image" [label]="dance.image.alt" ratio="1:1" tone="blush">
-    </app-image-placeholder>
+    <div class="detail-hero__image">
+      <app-image-placeholder [label]="dance.image.alt" tone="blush" [fill]="true"></app-image-placeholder>
+    </div>
   </section>
 
   <section class="detail-body">
     <div class="detail-body__main">
-      <h2>{{ 'DANCE_DETAIL.WHAT_CLASS_LOOKS_LIKE' | translate }}</h2>
-      <p>{{ dance.aboutClass }}</p>
-
-      <h2>{{ 'DANCE_DETAIL.WHAT_TO_BRING' | translate }}</h2>
-      <p>{{ dance.whatToBring }}</p>
+      <ng-container *ngFor="let section of dance.detailSections">
+        <h2>{{ section.headingKey | translate }}</h2>
+        <ul class="detail-points" *ngIf="section.points?.length">
+          <li *ngFor="let point of section.points">
+            <strong>{{ point.titleKey | translate }}:</strong> {{ point.bodyKey | translate }}
+          </li>
+        </ul>
+        <p *ngFor="let paragraphKey of section.paragraphKeys">{{ paragraphKey | translate }}</p>
+      </ng-container>
     </div>
 
     <aside class="detail-body__sidebar">

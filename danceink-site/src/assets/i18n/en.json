@@ -29,6 +29,93 @@
     "MUSIC_MOVEMENT": "Music & Movement",
     "BALLET_WORKOUT": "Ballet Workout"
   },
+  "BALLET_DETAIL": {
+    "LEARN_HEADING": "What You Will Learn",
+    "TECHNIQUE_TITLE": "Classical Ballet Technique",
+    "TECHNIQUE_BODY": "Develop correct posture, balance, alignment, and body coordination.",
+    "FLEXIBILITY_TITLE": "Flexibility & Strength",
+    "FLEXIBILITY_BODY": "Improve flexibility, muscle control, and physical endurance.",
+    "MUSICALITY_TITLE": "Musicality & Rhythm",
+    "MUSICALITY_BODY": "Learn to move naturally and expressively with music.",
+    "GRACE_TITLE": "Grace & Expression",
+    "GRACE_BODY": "Build confidence, elegance, and artistic creativity.",
+    "DISCIPLINE_TITLE": "Discipline & Focus",
+    "DISCIPLINE_BODY": "Develop patience, dedication, and attention to detail.",
+    "JOURNEY_HEADING": "A Journey for Every Dancer",
+    "JOURNEY_BODY": "Whether you are taking your first steps into the world of ballet or looking to refine your existing skills, our classes are designed to support every dancer's individual journey. With guidance, encouragement, and a passion for dance, we help each student reach their full potential.",
+    "BEGIN_HEADING": "Let Your Journey Begin",
+    "BEGIN_BODY": "Step into the world of ballet, discover the beauty of movement, and let every dance tell a story."
+  },
+  "MODERN_DETAIL": {
+    "LEARN_HEADING": "What You Will Learn",
+    "TECHNIQUE_TITLE": "Modern Dance Technique",
+    "TECHNIQUE_BODY": "Explore body awareness, movement control, balance, and coordination.",
+    "STRENGTH_TITLE": "Strength & Flexibility",
+    "STRENGTH_BODY": "Build physical strength, improve flexibility, and develop endurance.",
+    "MUSICALITY_TITLE": "Musicality & Rhythm",
+    "MUSICALITY_BODY": "Discover how to interpret music and translate its energy into movement.",
+    "CREATIVITY_TITLE": "Creativity & Expression",
+    "CREATIVITY_BODY": "Develop your own style, express emotions, and tell stories through dance.",
+    "CONFIDENCE_TITLE": "Confidence & Individuality",
+    "CONFIDENCE_BODY": "Embrace your uniqueness, build self-confidence, and develop freedom of movement.",
+    "JOURNEY_HEADING": "A Journey for Every Dancer",
+    "JOURNEY_BODY": "Whether you are discovering modern dance for the first time or looking to expand your movement vocabulary, our classes encourage every dancer to explore, experiment, and grow. With guidance, inspiration, and a supportive atmosphere, we help each student develop their technique while discovering their own artistic voice.",
+    "MOVEMENT_HEADING": "Let Your Movement Speak",
+    "MOVEMENT_BODY": "Step into the world of modern dance, embrace your creativity, and discover the freedom of expressing yourself through movement."
+  },
+  "CONTEMPORARY_DETAIL": {
+    "LEARN_HEADING": "What You Will Learn",
+    "TECHNIQUE_TITLE": "Contemporary Dance Technique",
+    "TECHNIQUE_BODY": "Develop fluidity, coordination, balance, and control through a variety of movement techniques.",
+    "STRENGTH_TITLE": "Strength & Flexibility",
+    "STRENGTH_BODY": "Build physical strength, improve flexibility, and develop body awareness.",
+    "FLOOR_TITLE": "Floor Work & Movement Flow",
+    "FLOOR_BODY": "Explore transitions, grounded movements, and the relationship between the body and space.",
+    "MUSICALITY_TITLE": "Musicality & Emotional Expression",
+    "MUSICALITY_BODY": "Learn to interpret music, communicate emotions, and tell stories through movement.",
+    "CREATIVITY_TITLE": "Creativity & Individuality",
+    "CREATIVITY_BODY": "Discover your personal movement style, develop improvisation skills, and embrace artistic freedom.",
+    "JOURNEY_HEADING": "A Journey for Every Dancer",
+    "JOURNEY_BODY": "Whether you are discovering contemporary dance for the first time or looking to deepen your artistic expression, our classes encourage every dancer to explore, experiment, and grow. With guidance, inspiration, and a supportive atmosphere, we help each student develop their technique, confidence, and unique artistic identity.",
+    "EMOTIONS_HEADING": "Let Your Emotions Move You",
+    "EMOTIONS_BODY": "Step into the world of contemporary dance, explore the connection between movement and emotion, and discover the beauty of expressing your inner world through dance."
+  },
+  "BALLET_WORKOUT_DETAIL": {
+    "LEARN_HEADING": "What You Will Learn",
+    "TONING_TITLE": "Body Strength & Toning",
+    "TONING_BODY": "Strengthen and activate your muscles through controlled, ballet-inspired movements.",
+    "POSTURE_TITLE": "Posture & Alignment",
+    "POSTURE_BODY": "Improve your posture, body awareness, and overall alignment.",
+    "FLEXIBILITY_TITLE": "Flexibility & Mobility",
+    "FLEXIBILITY_BODY": "Increase flexibility, improve mobility, and enjoy greater freedom of movement.",
+    "BALANCE_TITLE": "Balance & Coordination",
+    "BALANCE_BODY": "Develop stability, control, and coordination through precise exercises.",
+    "CORE_TITLE": "Core Strength & Endurance",
+    "CORE_BODY": "Build a stronger core, improve muscular endurance, and enhance overall fitness.",
+    "JOURNEY_HEADING": "A Journey for Every Body",
+    "JOURNEY_BODY": "Whether you are a fitness enthusiast, a ballet lover, or simply looking for a new way to stay active, Ballet Workout welcomes everyone who wants to move, strengthen, and feel good. No previous ballet experience is necessary. With guided exercises and a supportive atmosphere, each class allows you to progress at your own pace while enjoying the elegance of ballet-inspired movement.",
+    "FEEL_HEADING": "Feel Strong. Move Beautifully.",
+    "FEEL_BODY": "Discover a different approach to fitness, embrace the elegance of ballet, and enjoy the benefits of movement that strengthens both body and mind."
+  },
+  "MUSIC_MOVEMENT_DETAIL": {
+    "DISCOVER_HEADING": "What Your Little One Will Discover",
+    "MUSIC_TITLE": "Music & Rhythm",
+    "MUSIC_BODY": "Explore sounds, melodies, and rhythms through songs, musical games, and playful activities.",
+    "MOVEMENT_TITLE": "Movement & Coordination",
+    "MOVEMENT_BODY": "Develop balance, body awareness, coordination, and basic motor skills through joyful movement.",
+    "CREATIVITY_TITLE": "Creativity & Imagination",
+    "CREATIVITY_BODY": "Discover new ways to express themselves through dancing, storytelling, and imaginative play.",
+    "SOCIAL_TITLE": "Social Interaction",
+    "SOCIAL_BODY": "Build confidence, develop communication skills, and enjoy interacting with other children.",
+    "SENSORY_TITLE": "Sensory Exploration",
+    "SENSORY_BODY": "Experience different sounds, movements, textures, and musical instruments in a fun and stimulating environment.",
+    "CONNECTION_TITLE": "Parent-Child Connection",
+    "CONNECTION_BODY": "Share precious moments through music and movement, strengthening the special bond between parent and child.",
+    "JOURNEY_HEADING": "A Magical Journey for Little Ones",
+    "JOURNEY_BODY": "Created especially for children aged 2–4 years old, Baby Mama offers a gentle and playful introduction to music and movement. Every child is encouraged to participate at their own pace, explore their individuality, and enjoy the freedom of self-expression. With the loving presence of a parent or caregiver and the guidance of our instructors, each class becomes a wonderful opportunity to learn, connect, and grow together.",
+    "DANCE_HEADING": "Let Little Feet Dance!",
+    "DANCE_BODY": "Step into a world of music, imagination, and joyful discoveries. Let your little ones sing, dance, play, and explore while creating beautiful memories through the magic of movement."
+  },
   "DANCE_LEVELS": {
     "PREPARATOIRE": "Preparatoire",
     "BALLET_1": "Ballet 1",
@@ -99,8 +186,6 @@
   "DANCE_DETAIL": {
     "AGES": "Ages",
     "STUDIO": "Studio",
-    "WHAT_CLASS_LOOKS_LIKE": "What a class looks like",
-    "WHAT_TO_BRING": "What to bring",
     "LEVELS": "Levels",
     "VIEW_SCHEDULE": "View the schedule",
     "NOT_FOUND": "We couldn't find that class."
@@ -161,8 +246,10 @@
     "ASK_FOR_LINK": "Ask for the link"
   },
   "STUDIO_PAGE": {
-    "EYEBROW": "The studio",
+    "EYEBROW": "Our space",
     "BIO": "After 10 years of experience in the world of dance, and under the artistic direction of Ioanna Kanellopoulou, DanceInk was created — a contemporary space for expression, creativity, and growth.",
+    "CLASSES": "Our classes offer a variety of dance styles for all ages and levels, from beginners to advanced. Each class is designed to build dance skills, creativity, and the physical development of our students.",
+    "PILATES": "DanceInk also offers Pilates Mat and Pilates Reformer classes. Pilates is a method of exercise that focuses on good posture, breath control, and core strength. It combines gentle yet dynamic movements that improve flexibility, balance, and overall wellbeing.",
     "WHATSAPP": "WhatsApp"
   },
   "FOOTER": {
@@ -174,5 +261,10 @@
   },
   "MOBILE_MENU": {
     "CLOSE": "Close"
+  },
+  "FUNDING": {
+    "OPEN": "ESPA funding information",
+    "CLOSE": "Close",
+    "TEXT": "This business was funded by the Action “Support for the Establishment and Operation of New Small and Medium-sized Enterprises” of the Competitiveness Programme (ESPA 2021-2027). The Action aims to support the investment plans of SMEs that are being founded or are newly established, which will invest their own resources in the activity they intend to pursue and will create new jobs."
   }
 }
