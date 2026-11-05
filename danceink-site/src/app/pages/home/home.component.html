@@ -8,7 +8,8 @@
     eyebrowNumber="01"
     [eyebrowLabel]="'NAV.DANCE' | translate"
     [heading]="'HOME.DANCE_TEASER_HEADING' | translate"
-    imageLabel="Ballet barre, landscape"
+    imageSrc="assets/images/homepage/ballet-tile.jpg"
+    [imageLabel]="'HOME.DANCE_PHOTO_ALT' | translate"
     imageRatio="3:2"
     tone="blush">
     <div list>
@@ -28,7 +29,8 @@
     eyebrowNumber="02"
     [eyebrowLabel]="'NAV.PILATES' | translate"
     [heading]="'HOME.PILATES_TEASER_HEADING' | translate"
-    imageLabel="Reformer studio, landscape"
+    imageSrc="assets/images/homepage/homepage_pilates_tile.jpg"
+    [imageLabel]="'HOME.PILATES_PHOTO_ALT' | translate"
     imageRatio="3:2"
     tone="sage">
     <div list>
@@ -60,7 +62,7 @@
         [ngClass]="'timetable-preview__entry--' + entry.category"
         *ngFor="let entry of day.entries">
         <span>{{ entry.startTime }} {{ entry.className | translate }}</span>
-        <span class="timetable-preview__meta">{{ entry.meta }}</span>
+        <span class="timetable-preview__meta"><ng-container *ngIf="entry.ages">{{ entry.ages === 'adults' ? ('CLASS_META.ADULTS' | translate) : entry.ages + ' ' + ('CLASS_META.YEARS' | translate) }} · </ng-container>{{ 'CLASS_META.STUDIO_' + entry.studio | translate }}</span>
       </div>
     </div>
   </div>

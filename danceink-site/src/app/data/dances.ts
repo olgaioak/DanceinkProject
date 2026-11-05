@@ -21,7 +21,7 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.BALLET',
     aboutKey: 'DANCE_ABOUT.BALLET',
     teacher: 'Ioanna Kanellopoulou',
-    image: { src: 'assets/images/dance/ballet.jpg', alt: 'Ballet class at the barre', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/dances/ballet.jpeg', altKey: 'DANCE_PHOTOS.BALLET' },
     levels: [
       { nameKey: 'DANCE_LEVELS.PREPARATOIRE', agesKey: 'LEVEL_AGES.3_5_TO_5' },
       { nameKey: 'DANCE_LEVELS.BALLET_1', agesKey: 'LEVEL_AGES.6_TO_8' },
@@ -62,7 +62,6 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.MODERN_MUSICAL',
     aboutKey: 'DANCE_ABOUT.MODERN_MUSICAL',
     teacher: 'Ioanna Kanellopoulou',
-    image: { src: 'assets/images/dance/modern-musical.jpg', alt: 'Modern and musical theatre dance class', aspectRatio: '3:2' },
     levels: [
       { nameKey: 'DANCE_LEVELS.CHILDREN', agesKey: 'LEVEL_AGES.6_TO_10' },
       { nameKey: 'DANCE_LEVELS.TEENS', agesKey: 'LEVEL_AGES.11_PLUS' }
@@ -100,7 +99,7 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.CONTEMPORARY',
     aboutKey: 'DANCE_ABOUT.CONTEMPORARY',
     teacher: 'Ioanna Kanellopoulou',
-    image: { src: 'assets/images/dance/contemporary.jpg', alt: 'Contemporary dance class', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/dances/contemporary.jpg', altKey: 'DANCE_PHOTOS.CONTEMPORARY', position: '50% 70%' },
     levels: [
       { nameKey: 'DANCE_LEVELS.CHILDREN', agesKey: 'LEVEL_AGES.6_TO_10' },
       { nameKey: 'DANCE_LEVELS.TEENS', agesKey: 'LEVEL_AGES.11_TO_14' },
@@ -140,7 +139,7 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.MUSIC_MOVEMENT',
     aboutKey: 'DANCE_ABOUT.MUSIC_MOVEMENT',
     teacher: 'Ioanna Kanellopoulou',
-    image: { src: 'assets/images/dance/music-movement.jpg', alt: 'Music and movement class for young children', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/dances/music-movement.jpg', altKey: 'DANCE_PHOTOS.MUSIC_MOVEMENT' },
     levels: [{ nameKey: 'DANCE_LEVELS.BABY_MAMA', agesKey: 'LEVEL_AGES.2_TO_3_5' }],
     detailSections: [
       {
@@ -176,7 +175,7 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.BALLET_WORKOUT',
     aboutKey: 'DANCE_ABOUT.BALLET_WORKOUT',
     teacher: 'Ioanna Kanellopoulou',
-    image: { src: 'assets/images/dance/ballet-workout.jpg', alt: 'Ballet-inspired fitness class', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/dances/ballet-workout.jpg', altKey: 'DANCE_PHOTOS.BALLET_WORKOUT' },
     levelsNoteKey: 'DANCE_LEVELS.BALLET_WORKOUT_NOTE',
     detailSections: [
       {

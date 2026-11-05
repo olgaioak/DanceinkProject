@@ -23,11 +23,20 @@
 
 <section class="dance-rows">
   <article class="dance-row" *ngFor="let dance of filteredDances">
-    <app-image-placeholder
-      [label]="dance.image.alt"
-      [ratio]="dance.image.aspectRatio"
-      [tone]="dance.order % 2 === 1 ? 'blush' : 'neutral'">
-    </app-image-placeholder>
+    <img
+      *ngIf="dance.photo; else rowPlaceholder"
+      class="dance-row__photo"
+      [src]="dance.photo.src"
+      [alt]="dance.photo.altKey | translate"
+      [style.objectPosition]="dance.photo.position"
+      loading="lazy" />
+    <ng-template #rowPlaceholder>
+      <app-image-placeholder
+        [label]="dance.labelKey | translate"
+        ratio="4:3"
+        [tone]="dance.order % 2 === 1 ? 'blush' : 'neutral'">
+      </app-image-placeholder>
+    </ng-template>
 
     <div class="dance-row__content">
       <div class="dance-row__heading-row">

@@ -1,5 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { filter, map, Observable, startWith } from 'rxjs';
@@ -24,8 +24,15 @@ export class AppComponent {
 
   @ViewChild('fundingDialog') private fundingDialog!: ElementRef<HTMLDialogElement>;
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(
+    private translate: TranslateService,
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document
+  ) {
     this.translate.setDefaultLang('el');
+    // Keep <html lang> in step with the active language, so browsers apply Greek rules
+    // (e.g. dropping accents in CSS-uppercased text) and screen readers pick the right voice.
+    this.translate.onLangChange.subscribe((event) => (this.document.documentElement.lang = event.lang));
     const savedLang = localStorage.getItem('lang');
     this.translate.use(savedLang || 'el');
 

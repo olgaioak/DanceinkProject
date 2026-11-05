@@ -2,26 +2,23 @@
   <section class="studio-intro">
     <div class="studio-intro__content">
       <app-section-eyebrow>{{ 'STUDIO_PAGE.EYEBROW' | translate }}</app-section-eyebrow>
-      <h1>{{ studio.ownerName }}</h1>
+      <h1>{{ 'STUDIO_PAGE.OWNER_NAME' | translate }}</h1>
       <img class="studio-intro__mark" src="assets/images/branding/DanceInk-Compact-Logo-white.png" alt="" />
       <p>{{ 'STUDIO_PAGE.BIO' | translate }}</p>
       <p>{{ 'STUDIO_PAGE.CLASSES' | translate }}</p>
       <p>{{ 'STUDIO_PAGE.PILATES' | translate }}</p>
     </div>
-    <app-image-placeholder
-      class="studio-intro__portrait"
-      [label]="studio.portrait.alt"
-      [ratio]="studio.portrait.aspectRatio"
-      tone="blush">
-    </app-image-placeholder>
+    <div class="studio-intro__photo">
+      <img [src]="studio.mainPhoto.src" [alt]="studio.mainPhoto.altKey | translate" />
+    </div>
   </section>
 
   <section class="studio-photos">
-    <app-image-placeholder
+    <img
       *ngFor="let photo of studio.studioPhotos"
-      [label]="photo.label + ' — ' + photo.alt"
-      [ratio]="photo.aspectRatio"
-      [tone]="photo.label === 'Studio B' ? 'sage' : 'blush'">
-    </app-image-placeholder>
+      class="studio-photos__image"
+      [src]="photo.src"
+      [alt]="photo.altKey | translate"
+      loading="lazy" />
   </section>
 </ng-container>

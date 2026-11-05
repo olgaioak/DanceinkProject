@@ -1,5 +1,5 @@
 <div class="card" [routerLink]="['/dance', dance.id]">
-  <img [src]="dance.image.src" [alt]="dance.image.alt" />
+  <img *ngIf="dance.photo" [src]="dance.photo.src" [alt]="dance.photo.altKey | translate" />
   <div class="overlay">
     <h3>{{ dance.labelKey | translate }}</h3>
   </div>

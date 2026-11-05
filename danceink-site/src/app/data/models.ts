@@ -36,7 +36,8 @@ export interface DanceDiscipline {
   shortDescriptionKey: string;
   aboutKey?: string;
   teacher: string;
-  image: ImageAsset;
+  /** Real photo for the dance; pages show a striped placeholder while this is missing. */
+  photo?: Photo;
   levels?: DanceLevel[];
   levelsNoteKey?: string;
   /** Extra content sections shown in the main column of the dance's details page. */
@@ -47,6 +48,14 @@ export interface DanceDetailSection {
   headingKey: string;
   points?: { titleKey: string; bodyKey: string }[];
   paragraphKeys?: string[];
+}
+
+export interface Photo {
+  src: string;
+  /** Translation key for the image description read by screen readers. */
+  altKey: string;
+  /** Which part of the photo to keep when it is cropped to fit (CSS object-position), e.g. '50% 100%'. */
+  position?: string;
 }
 
 export interface DanceLevel {
@@ -60,7 +69,8 @@ export interface PilatesProgram {
   classSize: number | 'private';
   durationMinutes: number;
   descriptionKey: string;
-  image: ImageAsset;
+  /** Real photo for the class; the Pilates page shows a striped placeholder while this is missing. */
+  photo?: Photo;
   schedule: ClassSession[];
 }
 
@@ -71,7 +81,8 @@ export interface TimetableEntry {
   endTime: string;
   className: string;
   category: ClassCategory;
-  meta: string;
+  /** Age group, e.g. '6-8', '15+' or 'adults'; omitted when the class is open to all. */
+  ages?: string;
   studio: string;
   linkTo?: string;
 }
@@ -111,7 +122,6 @@ export interface SocialLink {
 
 export interface StudioInfo {
   brandName: string;
-  ownerName: string;
   addressLines: string[];
   phone: string;
   email: string;
@@ -120,6 +130,12 @@ export interface StudioInfo {
   mapEmbedUrl?: string;
   directionsUrl?: string;
   socialLinks: SocialLink[];
-  portrait: ImageAsset;
-  studioPhotos: (ImageAsset & { label: string })[];
+  mainPhoto: StudioPhoto;
+  studioPhotos: StudioPhoto[];
+}
+
+export interface StudioPhoto {
+  src: string;
+  /** Translation key for the image description read by screen readers. */
+  altKey: string;
 }

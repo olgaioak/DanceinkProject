@@ -1,8 +1,10 @@
 {
   "HOME": {
-    "DANCE_TEASER_HEADING": "Five disciplines, from early years to adult",
+    "DANCE_PHOTO_ALT": "A ballet dancer mid-leap in a bright dance studio",
+    "PILATES_PHOTO_ALT": "The instructor guiding a student through a Pilates mat exercise with a ball",
+    "DANCE_TEASER_HEADING": "From the early years to adulthood",
     "SEE_ALL_DANCE_CLASSES": "See all dance classes",
-    "PILATES_TEASER_HEADING": "Mat and reformer, small groups only",
+    "PILATES_TEASER_HEADING": "Mat and reformer, in small groups",
     "PILATES_NOTE": "New to the reformer? Your first session is a private assessment so we can set the springs to you.",
     "SEE_PILATES": "See Pilates",
     "GROUPS_OF": "Groups of",
@@ -116,6 +118,18 @@
     "DANCE_HEADING": "Let Little Feet Dance!",
     "DANCE_BODY": "Step into a world of music, imagination, and joyful discoveries. Let your little ones sing, dance, play, and explore while creating beautiful memories through the magic of movement."
   },
+  "CLASS_META": {
+    "YEARS": "years",
+    "ADULTS": "Adults",
+    "STUDIO_A": "Studio A",
+    "STUDIO_B": "Studio B"
+  },
+  "DANCE_PHOTOS": {
+    "BALLET": "A young ballet student stretching on the floor in ballet slippers",
+    "CONTEMPORARY": "Two contemporary dancers in a headstand on stage",
+    "BALLET_WORKOUT": "Ballet Workout students at the barre with Pilates balls",
+    "MUSIC_MOVEMENT": "Young children in pink leotards stretching on the floor"
+  },
   "DANCE_LEVELS": {
     "PREPARATOIRE": "Preparatoire",
     "BALLET_1": "Ballet 1",
@@ -185,7 +199,6 @@
   },
   "DANCE_DETAIL": {
     "AGES": "Ages",
-    "STUDIO": "Studio",
     "LEVELS": "Levels",
     "VIEW_SCHEDULE": "View the schedule",
     "NOT_FOUND": "We couldn't find that class."
@@ -246,14 +259,19 @@
     "ASK_FOR_LINK": "Ask for the link"
   },
   "STUDIO_PAGE": {
+    "OWNER_NAME": "Ioanna Kanellopoulou",
     "EYEBROW": "Our space",
     "BIO": "After 10 years of experience in the world of dance, and under the artistic direction of Ioanna Kanellopoulou, DanceInk was created — a contemporary space for expression, creativity, and growth.",
     "CLASSES": "Our classes offer a variety of dance styles for all ages and levels, from beginners to advanced. Each class is designed to build dance skills, creativity, and the physical development of our students.",
     "PILATES": "DanceInk also offers Pilates Mat and Pilates Reformer classes. Pilates is a method of exercise that focuses on good posture, breath control, and core strength. It combines gentle yet dynamic movements that improve flexibility, balance, and overall wellbeing.",
-    "WHATSAPP": "WhatsApp"
+    "WHATSAPP": "WhatsApp",
+    "PHOTO_MAIN": "Flowers and DANCE ink business cards at the reception",
+    "PHOTO_STUDIO_A": "Studio A with a wooden floor, barres, mirrors and Pilates mats",
+    "PHOTO_STUDIO_B": "Studio B with Pilates Reformers beside a large window",
+    "PHOTO_RECEPTION": "The DANCE ink reception desk"
   },
   "FOOTER": {
-    "STUDIO": "Studio",
+    "STUDIO": "Our space",
     "CONTACT": "Contact",
     "RECEPTION": "Reception",
     "GET_DIRECTIONS": "Get Directions",

@@ -51,7 +51,7 @@
         <div class="timetable-entry" [ngClass]="'timetable-entry--' + entry.category" *ngFor="let entry of period.entries">
           <span class="timetable-entry__time">{{ entry.startTime }} — {{ entry.endTime }}</span>
           <span class="timetable-entry__name">{{ entry.className | translate }}</span>
-          <span class="timetable-entry__meta">{{ entry.meta }}</span>
+          <span class="timetable-entry__meta"><ng-container *ngIf="entry.ages">{{ entry.ages === 'adults' ? ('CLASS_META.ADULTS' | translate) : entry.ages + ' ' + ('CLASS_META.YEARS' | translate) }} · </ng-container>{{ 'CLASS_META.STUDIO_' + entry.studio | translate }}</span>
         </div>
         <p class="timetable-period__empty" *ngIf="!period.entries.length">—</p>
       </div>

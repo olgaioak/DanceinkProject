@@ -8,17 +8,26 @@
     </div>
   </div>
   <div class="pilates-hero__image">
-    <app-image-placeholder label="Reformer" tone="sage" [fill]="true"></app-image-placeholder>
+    <img src="assets/images/homepage/homepage_pilates_tile.jpg" [alt]="'HOME.PILATES_PHOTO_ALT' | translate" />
   </div>
 </section>
 
 <section class="pilates-programs">
   <div class="pilates-programs__card" *ngFor="let program of groupPrograms$ | async">
-    <app-image-placeholder
-      [label]="program.labelKey | translate"
-      ratio="3:2"
-      [tone]="program.id === 'mat' ? 'blush' : 'sage'">
-    </app-image-placeholder>
+    <img
+      *ngIf="program.photo; else programPlaceholder"
+      class="pilates-programs__photo"
+      [src]="program.photo.src"
+      [alt]="program.photo.altKey | translate"
+      [style.objectPosition]="program.photo.position"
+      loading="lazy" />
+    <ng-template #programPlaceholder>
+      <app-image-placeholder
+        [label]="program.labelKey | translate"
+        ratio="1:1"
+        [tone]="program.id === 'mat' ? 'blush' : 'sage'">
+      </app-image-placeholder>
+    </ng-template>
     <h2>{{ program.labelKey | translate }}</h2>
     <p>{{ program.descriptionKey | translate }}</p>
     <dl class="pilates-programs__meta">

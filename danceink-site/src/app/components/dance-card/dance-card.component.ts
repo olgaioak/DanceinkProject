@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -6,7 +7,7 @@ import { DanceDiscipline } from '../../data/models';
 @Component({
   selector: 'app-dance-card',
   standalone: true,
-  imports: [RouterModule, TranslateModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './dance-card.component.html',
   styleUrl: './dance-card.component.css'
 })

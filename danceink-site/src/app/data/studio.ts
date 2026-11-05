@@ -3,11 +3,9 @@ import { StudioInfo } from './models';
 // Contact details, address, and social links are real, transcribed from danceink.gr.
 // Bio text moved to i18n (STUDIO_PAGE.BIO) since it's real content that needs both languages.
 // mapEmbedUrl is a keyless Google Maps embed built from the address above.
-// The portrait/studio photo assets have no real-site source and remain placeholder
-// pending real content.
+// Photos are web-sized copies of the studio's own photos.
 export const STUDIO: StudioInfo = {
   brandName: 'DANCE ink',
-  ownerName: 'Ioanna Kanellopoulou',
   addressLines: ['Σταδίου 48-52', 'Νέα Σμύρνη 171 23'],
   phone: '+30 21 0932 9479',
   email: 'danceink.gr@gmail.com',
@@ -22,14 +20,10 @@ export const STUDIO: StudioInfo = {
     { label: 'Instagram', url: 'https://instagram.com/danceink.gr' },
     { label: 'Facebook', url: 'https://facebook.com/danceink.gr' }
   ],
-  portrait: {
-    src: 'assets/images/studio/portrait.jpg',
-    alt: 'Portrait of Ioanna Kanellopoulou',
-    aspectRatio: '4:5'
-  },
+  mainPhoto: { src: 'assets/images/studio/studio-main.jpg', altKey: 'STUDIO_PAGE.PHOTO_MAIN' },
   studioPhotos: [
-    { label: 'Studio A', src: 'assets/images/studio/studio-a.jpg', alt: 'Studio A, sprung floor with barre and mirrors', aspectRatio: '3:2' },
-    { label: 'Studio B', src: 'assets/images/studio/studio-b.jpg', alt: 'Studio B, reformer room', aspectRatio: '3:2' },
-    { label: 'Reception', src: 'assets/images/studio/reception.jpg', alt: 'Reception area', aspectRatio: '3:2' }
+    { src: 'assets/images/studio/studio-a.jpg', altKey: 'STUDIO_PAGE.PHOTO_STUDIO_A' },
+    { src: 'assets/images/studio/studio-b.jpg', altKey: 'STUDIO_PAGE.PHOTO_STUDIO_B' },
+    { src: 'assets/images/studio/reception.jpg', altKey: 'STUDIO_PAGE.PHOTO_RECEPTION' }
   ]
 };

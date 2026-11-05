@@ -15,10 +15,14 @@
       <div class="detail-hero__badges">
         <app-badge>{{ 'DANCE_DETAIL.AGES' | translate }} {{ dance.ageRange | ageRange }}</app-badge>
         <app-badge>{{ dance.durationMinutes }}′</app-badge>
-        <app-badge>{{ 'DANCE_DETAIL.STUDIO' | translate }} {{ dance.studio }}</app-badge>      </div>
+        <app-badge>{{ 'CLASS_META.STUDIO_' + dance.studio | translate }}</app-badge>
+      </div>
     </div>
     <div class="detail-hero__image">
-      <app-image-placeholder [label]="dance.image.alt" tone="blush" [fill]="true"></app-image-placeholder>
+      <img *ngIf="dance.photo; else heroPlaceholder" [src]="dance.photo.src" [alt]="dance.photo.altKey | translate" [style.objectPosition]="dance.photo.position" />
+      <ng-template #heroPlaceholder>
+        <app-image-placeholder [label]="dance.labelKey | translate" tone="blush" [fill]="true"></app-image-placeholder>
+      </ng-template>
     </div>
   </section>
 

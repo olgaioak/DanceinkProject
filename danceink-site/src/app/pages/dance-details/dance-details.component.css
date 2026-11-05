@@ -12,10 +12,18 @@
   background: var(--color-blush-soft);
 }
 
-/* The image fills whatever height the text column needs, so the hero is only as tall as its text. */
+/* At least 4:3, so more of each photo shows; grows with the text column if that is taller. */
 .detail-hero__image {
   position: relative;
-  min-height: 240px;
+  aspect-ratio: 4 / 3;
+}
+
+.detail-hero__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .detail-hero__description {
@@ -94,8 +102,7 @@
   }
 
   .detail-hero__image {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
   }
 
   .detail-body {

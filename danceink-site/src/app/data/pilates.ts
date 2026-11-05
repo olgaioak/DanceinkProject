@@ -9,7 +9,7 @@ export const PILATES_PROGRAMS: PilatesProgram[] = [
     classSize: 6,
     durationMinutes: 50,
     descriptionKey: 'PILATES_CONTENT.MAT',
-    image: { src: 'assets/images/pilates/mat.jpg', alt: 'Pilates mat class', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/studio/studio-a.jpg', altKey: 'STUDIO_PAGE.PHOTO_STUDIO_A' },
     schedule: [
       { day: 'tue', startTime: '08:00', endTime: '08:50', studio: 'B' },
       { day: 'wed', startTime: '08:00', endTime: '08:50', studio: 'B' },
@@ -22,7 +22,7 @@ export const PILATES_PROGRAMS: PilatesProgram[] = [
     classSize: 3,
     durationMinutes: 50,
     descriptionKey: 'PILATES_CONTENT.REFORMER',
-    image: { src: 'assets/images/pilates/reformer.jpg', alt: 'Pilates reformer group class', aspectRatio: '3:2' },
+    photo: { src: 'assets/images/studio/studio-b.jpg', altKey: 'STUDIO_PAGE.PHOTO_STUDIO_B', position: '50% 75%' },
     schedule: [
       { day: 'mon', startTime: '19:30', endTime: '20:20', studio: 'B' },
       { day: 'thu', startTime: '09:00', endTime: '09:50', studio: 'B' },
@@ -35,7 +35,6 @@ export const PILATES_PROGRAMS: PilatesProgram[] = [
     classSize: 'private',
     durationMinutes: 50,
     descriptionKey: 'PILATES_CONTENT.REFORMER_1_1',
-    image: { src: 'assets/images/pilates/reformer-1-1.jpg', alt: 'Private reformer session', aspectRatio: '4:5' },
     schedule: [{ day: 'wed', startTime: '20:00', endTime: '20:50', studio: 'B', note: 'By request' }]
   }
 ];

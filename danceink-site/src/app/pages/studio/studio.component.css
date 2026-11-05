@@ -3,6 +3,21 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
+/* At least square, so more of the portrait photo shows; grows with the text column if that is taller. */
+.studio-intro__photo {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.studio-intro__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 65%; /* keep the DANCE ink cards at the bottom of the photo in view */
+}
+
 .studio-intro__content {
   padding: var(--space-2xl) var(--space-xl);
 }
@@ -22,9 +37,21 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+/* The studio photos are portrait, so the row uses a portrait shape to avoid heavy cropping. */
+.studio-photos__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
 @media (max-width: 860px) {
   .studio-intro {
     grid-template-columns: 1fr;
+  }
+
+  .studio-intro__photo {
+    aspect-ratio: 4 / 3;
   }
 
   .studio-photos {
