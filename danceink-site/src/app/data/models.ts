@@ -56,6 +56,8 @@ export interface Photo {
   altKey: string;
   /** Which part of the photo to keep when it is cropped to fit (CSS object-position), e.g. '50% 100%'. */
   position?: string;
+  /** Overrides the shape of the box the photo sits in (CSS aspect-ratio), e.g. '5 / 4' for a tall photo. */
+  aspectRatio?: string;
 }
 
 export interface DanceLevel {
@@ -68,7 +70,7 @@ export interface PilatesProgram {
   labelKey: string;
   classSize: number | 'private';
   durationMinutes: number;
-  descriptionKey: string;
+  descriptionKey?: string;
   /** Real photo for the class; the Pilates page shows a striped placeholder while this is missing. */
   photo?: Photo;
   schedule: ClassSession[];
@@ -138,4 +140,29 @@ export interface StudioPhoto {
   src: string;
   /** Translation key for the image description read by screen readers. */
   altKey: string;
+}
+
+export interface FaqCategory {
+  id: string;
+  titleKey: string;
+  items: FaqItem[];
+}
+
+export interface FaqItem {
+  id: string;
+  questionKey: string;
+  answerKey: string;
+  /** Extra words the widget search matches on (synonyms, other spellings); never shown. */
+  keywordsKey?: string;
+  /** Show call / email / Instagram buttons under the answer. */
+  showContact?: boolean;
+  /** A page on the site (or an external URL) that goes into more detail. */
+  link?: FaqLink;
+}
+
+export interface FaqLink {
+  labelKey: string;
+  route?: string;
+  queryParams?: Record<string, string>;
+  href?: string;
 }

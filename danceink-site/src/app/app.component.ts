@@ -6,6 +6,7 @@ import { filter, map, Observable, startWith } from 'rxjs';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FaqWidgetComponent } from './shared/faq-widget/faq-widget.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     RouterOutlet,
     TranslateModule,
     HeaderComponent,
-    FooterComponent],
+    FooterComponent,
+    FaqWidgetComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

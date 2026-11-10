@@ -8,6 +8,7 @@
     <app-contact-info class="footer__contact" [studio]="studio" tone="dark"></app-contact-info>
 
     <div class="footer__links">
+      <a routerLink="/faq">{{ 'NAV.FAQ' | translate }}</a>
       <ng-container *ngFor="let link of studio.socialLinks">
         <a *ngIf="isInternalLink(link.url)" [routerLink]="link.url">{{ link.label }}</a>
         <a *ngIf="!isInternalLink(link.url)" [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>

@@ -18,7 +18,7 @@
         <app-badge>{{ 'CLASS_META.STUDIO_' + dance.studio | translate }}</app-badge>
       </div>
     </div>
-    <div class="detail-hero__image">
+    <div class="detail-hero__image" [style.aspectRatio]="dance.photo?.aspectRatio">
       <img *ngIf="dance.photo; else heroPlaceholder" [src]="dance.photo.src" [alt]="dance.photo.altKey | translate" [style.objectPosition]="dance.photo.position" />
       <ng-template #heroPlaceholder>
         <app-image-placeholder [label]="dance.labelKey | translate" tone="blush" [fill]="true"></app-image-placeholder>

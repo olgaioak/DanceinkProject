@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { FloatingDirectionsButtonComponent } from './floating-directions-button/floating-directions-button.component';
@@ -9,7 +10,7 @@ import { STUDIO } from '../../data/studio';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule, ContactInfoComponent, FloatingDirectionsButtonComponent],
+  imports: [CommonModule, RouterModule, TranslateModule, ContactInfoComponent, FloatingDirectionsButtonComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

@@ -34,7 +34,6 @@ export const PILATES_PROGRAMS: PilatesProgram[] = [
     labelKey: 'PILATES_ITEMS.REFORMER_1_1',
     classSize: 'private',
     durationMinutes: 50,
-    descriptionKey: 'PILATES_CONTENT.REFORMER_1_1',
     schedule: [{ day: 'wed', startTime: '20:00', endTime: '20:50', studio: 'B', note: 'By request' }]
   }
 ];

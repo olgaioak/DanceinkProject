@@ -1,0 +1,27 @@
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.contact-actions__button {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.contact-actions__button:hover {
+  background: var(--color-ink);
+  color: var(--color-background);
+}
+
+.contact-actions--compact .contact-actions__button {
+  padding: var(--space-2xs) var(--space-sm);
+  font-size: 0.7rem;
+}

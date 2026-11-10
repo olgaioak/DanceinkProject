@@ -1,0 +1,34 @@
+<section class="faq-page">
+  <div class="faq-page__header">
+    <app-section-eyebrow>{{ 'FAQ.PAGE_EYEBROW' | translate }}</app-section-eyebrow>
+    <h1>{{ 'FAQ.PAGE_HEADING' | translate }}</h1>
+  </div>
+
+  <div class="faq-category" *ngFor="let category of categories">
+    <h2 class="faq-category__title">{{ category.titleKey | translate }}</h2>
+
+    <details class="faq-item" *ngFor="let item of category.items" [id]="item.id">
+      <summary class="faq-item__question">{{ item.questionKey | translate }}</summary>
+      <div class="faq-item__answer">
+        <p>{{ item.answerKey | translate }}</p>
+
+        <ng-container *ngIf="item.link as link">
+          <a *ngIf="link.route" class="faq-item__link" [routerLink]="link.route" [queryParams]="link.queryParams">
+            {{ link.labelKey | translate }} →
+          </a>
+          <a *ngIf="link.href" class="faq-item__link" [href]="link.href" target="_blank" rel="noopener noreferrer">
+            {{ link.labelKey | translate }} →
+          </a>
+        </ng-container>
+
+        <app-contact-actions *ngIf="item.showContact"></app-contact-actions>
+      </div>
+    </details>
+  </div>
+
+  <div class="faq-contact">
+    <h2>{{ 'FAQ.PAGE_CONTACT_HEADING' | translate }}</h2>
+    <p>{{ 'FAQ.PAGE_CONTACT_BODY' | translate }}</p>
+    <app-contact-actions></app-contact-actions>
+  </div>
+</section>

@@ -62,6 +62,7 @@ export const DANCES: DanceDiscipline[] = [
     shortDescriptionKey: 'DANCE_CONTENT.MODERN_MUSICAL',
     aboutKey: 'DANCE_ABOUT.MODERN_MUSICAL',
     teacher: 'Ioanna Kanellopoulou',
+    photo: { src: 'assets/images/dances/monterno_1.jpg', altKey: 'DANCE_PHOTOS.MODERN', position: '50% 75%', aspectRatio: '5 / 4' },
     levels: [
       { nameKey: 'DANCE_LEVELS.CHILDREN', agesKey: 'LEVEL_AGES.6_TO_10' },
       { nameKey: 'DANCE_LEVELS.TEENS', agesKey: 'LEVEL_AGES.11_PLUS' }
@@ -93,7 +94,7 @@ export const DANCES: DanceDiscipline[] = [
     order: 3,
     ageRange: { min: 6 },
     ageGroups: ['4-7', '8-11', '12+', 'adults'],
-    durationMinutes: 75,
+    durationMinutes: 60,
     maxCapacity: 12,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.CONTEMPORARY',
@@ -133,14 +134,14 @@ export const DANCES: DanceDiscipline[] = [
     order: 4,
     ageRange: { min: 2, max: 4 },
     ageGroups: ['2-4'],
-    durationMinutes: 40,
+    durationMinutes: 45,
     maxCapacity: 8,
     studio: 'A',
     shortDescriptionKey: 'DANCE_CONTENT.MUSIC_MOVEMENT',
     aboutKey: 'DANCE_ABOUT.MUSIC_MOVEMENT',
     teacher: 'Ioanna Kanellopoulou',
     photo: { src: 'assets/images/dances/music-movement.jpg', altKey: 'DANCE_PHOTOS.MUSIC_MOVEMENT' },
-    levels: [{ nameKey: 'DANCE_LEVELS.BABY_MAMA', agesKey: 'LEVEL_AGES.2_TO_3_5' }],
+    levels: [{ nameKey: 'DANCE_LEVELS.BABY_MAMA', agesKey: 'LEVEL_AGES.2_TO_4' }],
     detailSections: [
       {
         headingKey: 'MUSIC_MOVEMENT_DETAIL.DISCOVER_HEADING',

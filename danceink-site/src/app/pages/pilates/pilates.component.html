@@ -29,7 +29,7 @@
       </app-image-placeholder>
     </ng-template>
     <h2>{{ program.labelKey | translate }}</h2>
-    <p>{{ program.descriptionKey | translate }}</p>
+    <p *ngIf="program.descriptionKey">{{ program.descriptionKey | translate }}</p>
     <dl class="pilates-programs__meta">
       <div>
         <dt>{{ 'PILATES_PAGE.CLASS_SIZE' | translate }}</dt>

@@ -6,6 +6,7 @@ import { PilatesComponent } from './pages/pilates/pilates.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
 import { EventsComponent } from './pages/events/events.component';
 import { StudioComponent } from './pages/studio/studio.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'pilates', component: PilatesComponent },
   { path: 'timetable', component: TimetableComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'studio', component: StudioComponent }
+  { path: 'studio', component: StudioComponent },
+  { path: 'faq', component: FaqComponent }
 ];

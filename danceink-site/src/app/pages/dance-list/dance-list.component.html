@@ -29,6 +29,7 @@
       [src]="dance.photo.src"
       [alt]="dance.photo.altKey | translate"
       [style.objectPosition]="dance.photo.position"
+      [style.aspectRatio]="dance.photo.aspectRatio"
       loading="lazy" />
     <ng-template #rowPlaceholder>
       <app-image-placeholder
